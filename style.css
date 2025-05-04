@@ -1,0 +1,29 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #000;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 100px 20px;
+  min-height: 100vh;
+  border-bottom: 1px solid #333;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+  color: #00ffc3;
+}
+
+ul li {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
