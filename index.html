@@ -3,68 +3,222 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Personal Website</title>
+  <title>Om Kolhe</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-<nav>
-  <ul class="navbar">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About Me</a></li>
-    <li><a href="#projects">Research</a></li>
-    <li><a href="#resources">Resources</a></li>
-    <li><a href="#cv">CV</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
   <!-- Home -->
-  <section id="home">
-    <h1>Welcome</h1>
-    <p>I'm a scientist, coder, and thinker. Scroll down to learn more.</p>
-  </section>
+  <section id="home" class="home-hero">
+    <div class="home-overlay">
+        <h1 class="home-title">TECHNOLOGY, BEHAVIOR,<br/>COMPUTATION</h1>
+        <p class="home-quote">
+        <em>"As followers of natural science we know nothing of any relation between thoughts and the brain, except as a gross correlation in time and space." ~ Charles Scott Sherrington <br/> (Still true even after about a century)
+        </em>
+        </p>
+    </div>
+    </section>
+    
+    <!-- About Me -->
+    <section id="about" class="fade-in about-section">
+    <div class="sticky-header fade-on-stick">
+        <h2>ABOUT ME</h2>
+        <p class="about-name">Om Kolhe</p>
+      </div>
+    <div class="about-container">
+        <div class="about-img">
+        <img src="images/profile.jpeg" alt="Profile photo of Om Kolhe">
+        </div>
+        <div class="about-text">
+        <p>
+            I am a PhD candidate at Purdue University, working under the mentorship of <a href="https://nanoneurotech.com/" target="_blank">Prof. Krishna Jayant</a> in the Nano Neurotechnology Lab. My research focuses on understanding the neural mechanisms of learning and decision-making by developing novel technologies and experimental protocols. I am particularly interested in how neurons communicate and coordinate across multiple modalities to perform computations that are both robust and adaptable. To support this investigation, I developed a custom neural recording platform that integrates advanced electrode designs with a CMOS backend for multimodal interrogation of neural activity.
+        </p>
+        <p>
+            I earned a dual degree (B.Tech + M.Tech) in Electrical Engineering from the Indian Institute of Technology (IIT) Bombay in August 2020. For my Master’s thesis, I worked with <a href="https://www.ee.iitb.ac.in/wiki/faculty/mshojaei" target="_blank">Prof. Maryam Shojaei Baghini</a> to design a multi-phase oscillator for next-generation 5G receivers. During my undergraduate studies, I worked under <a href="https://www.ee.iitb.ac.in/wiki/faculty/mshojaei" target="_blank">Prof. Shalabh Gupta</a> on the front-end design of an IRNSS receiver (the Indian regional navigation satellite system).
+        </p>
+        <!-- <p>
+            <a href="cv.pdf" target="_blank">Download CV</a> &nbsp;|&nbsp;
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        </p> -->
+        </div>
+    </div>
+    </section>  
 
-  <!-- About Me -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m passionate about neuroscience, neural engineering, and computational modeling. I build tools to understand the brain.</p>
-  </section>
-
-  <!-- Research Projects -->
-  <section id="projects">
-    <h2>Research Projects</h2>
+  <!-- Projects -->
+  <section id="projects" class="fade-in">
+    <div class="sticky-header fade-on-stick"><h2>RESEARCH PROJECTS</h2></div>
     <ul>
-      <li>Spiking Neural Network Simulation in MATLAB</li>
+      <li>Spiking Neural Network Simulation</li>
       <li>Multimodal Neural Recording Platform</li>
       <li>Traveling Wave Analysis in Cortical Circuits</li>
     </ul>
   </section>
 
-  <!-- Resources / Blog -->
-  <section id="resources">
-    <h2>Resources / Blog</h2>
-    <p>I write about computational neuroscience, coding in MATLAB, and tips for scientific research.</p>
+  <!-- Gallery -->
+  <section id="gallery" class="fade-in">
+    <div class="sticky-header fade-on-stick"><h2>GALLERY</h2></div>
+    <div class="gallery-grid">
+      <img src="images/NNT_Logo_q003.png" alt="Microscale 3D printed Jayant lab name" onclick="openLightbox(this)">
+      <img src="images/PurduePSingle_q023.png" alt="Microscopic 3D printed Purdue Logo" onclick="openLightbox(this)">
+      <img src="images/MouseLeverLicking.gif" alt="Mouse performing a cue-initiated motor behaviour" onclick="openLightbox(this)">
+      <img src="images/IC.jpg" alt="Micrograph of wirebonded amplifier IC" onclick="openLightbox(this)">
+      <img src="images/GridImaging.GIF" alt="2P imaging of neurons through the transparent NeuroGrid" onclick="openLightbox(this)">
+      <img src="images/GCamp6f_042023.gif" alt="2P imaging of dendrites in L1 in Motor Cortex" onclick="openLightbox(this)">
+    </div>
+    <div id="lightbox">
+      <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+      <span class="lightbox-nav left" onclick="navigateLightbox(-1)">&#10094;</span>
+      <img id="lightbox-img" src="" alt="Full image">
+      <p id="lightbox-caption"></p>
+      <span class="lightbox-nav right" onclick="navigateLightbox(1)">&#10095;</span>
+    </div>
+    
+  </section>
+
+  <!-- Resources -->
+  <section id="resources" class="fade-in">
+    <div class="sticky-header fade-on-stick"><h2>RESOURCES / BLOG</h2></div>
     <ul>
-      <li><a href="#">Understanding STDP in LIF Models</a></li>
+      <li><a href="#">Understanding STDP</a></li>
       <li><a href="#">Motion Correction in 2P Imaging</a></li>
-      <li><a href="#">Designing Flexible Neural Probes</a></li>
+      <li><a href="#">Flexible Neural Probe Design</a></li>
     </ul>
   </section>
 
   <!-- CV -->
-  <section id="cv">
-    <h2>Curriculum Vitae</h2>
-    <p>Download my full CV: <a href="cv.pdf" target="_blank">Click here</a></p>
+  <section id="cv" class="fade-in">
+    <div class="sticky-header fade-on-stick"><h2>CURRICULUM VITAE</h2></div>
+    <p><a href="cv.pdf" target="_blank">Click here</a> to download my CV.</p>
   </section>
 
   <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
+  <section id="contact" class="fade-in">
+    <div class="sticky-header fade-on-stick"><h2>CONTACT</h2></div>
     <p>Email: you@example.com</p>
     <p>GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
   </section>
 
+  <!-- Scroll to Top -->
+  <button id="scrollTopBtn" title="Go to top">↑</button>
+
+  <!-- Navigation -->
+  <div class="nav-reveal-zone">
+    <nav class="floating-nav" id="smartNav">
+      <ul class="nav-list">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
+        <li><a href="#resources">RESOURCES</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Scripts -->
+
+  
+  <script>
+    const galleryImages = Array.from(document.querySelectorAll('.gallery-grid img'));
+    let currentIndex = 0;
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          window.scrollTo({ top: target.offsetTop - 80, behavior: "smooth" });
+        }
+      });
+    });
+
+    // Keyboard controls
+    document.addEventListener("keydown", function (event) {
+      const lightbox = document.getElementById("lightbox");
+      if (lightbox.style.display === "flex") {
+        if (event.key === "ArrowLeft") {
+          navigateLightbox(-1);
+        } else if (event.key === "ArrowRight") {
+          navigateLightbox(1);
+        } else if (event.key === "Escape") {
+          closeLightbox();
+        }
+      }
+    });
+
+
+    // Section fade-in
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Scroll to top
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = () => {
+      scrollTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+    scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Floating nav hide/reveal
+    const nav = document.getElementById("smartNav");
+    let navHidden = false;
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100 && !navHidden) {
+        nav.classList.add("hidden");
+        navHidden = true;
+      }
+    });
+    document.querySelector(".nav-reveal-zone").addEventListener("mouseenter", () => {
+      nav.classList.remove("hidden");
+    });
+    document.querySelector(".nav-reveal-zone").addEventListener("mouseleave", () => {
+      if (window.scrollY > 100) nav.classList.add("hidden");
+    });
+
+    // Sticky header animation
+    const stickyHeaders = document.querySelectorAll('.fade-on-stick');
+    const stickyObserver = new IntersectionObserver(
+      entries => entries.forEach(e => {
+        if (e.intersectionRatio < 1) e.target.classList.add('stuck');
+      }),
+      { threshold: [1] }
+    );
+    stickyHeaders.forEach(header => stickyObserver.observe(header));
+
+    // Lightbox
+    function openLightbox(img) {
+      currentIndex = galleryImages.indexOf(img);
+      showLightboxImage();
+      document.getElementById("lightbox").style.display = "flex";
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+
+    function navigateLightbox(direction) {
+      currentIndex += direction;
+
+      if (currentIndex < 0) currentIndex = galleryImages.length - 1;
+      if (currentIndex >= galleryImages.length) currentIndex = 0;
+
+      showLightboxImage();
+    }
+
+    function showLightboxImage() {
+      const img = galleryImages[currentIndex];
+      document.getElementById("lightbox-img").src = img.src;
+      document.getElementById("lightbox-caption").textContent = img.alt;
+    }
+
+  </script>
 </body>
 </html>
