@@ -21,7 +21,7 @@
     
     <!-- About Me -->
     <section id="about" class="fade-in about-section">
-    <div class="sticky-header fade-on-stick">
+    <div class="sticky-header">
         <h2>ABOUT ME</h2>
         <p class="about-name">Om Kolhe</p>
       </div>
@@ -31,7 +31,7 @@
         </div>
         <div class="about-text">
         <p>
-            I am a PhD candidate at Purdue University, working under the mentorship of <a href="https://nanoneurotech.com/" target="_blank">Prof. Krishna Jayant</a> in the Nano Neurotechnology Lab. My research focuses on understanding the neural mechanisms of learning and decision-making by developing novel technologies and experimental protocols. I am particularly interested in how neurons communicate and coordinate across multiple modalities to perform computations that are both robust and adaptable. To support this investigation, I developed a custom neural recording platform that integrates advanced electrode designs with a CMOS backend for multimodal interrogation of neural activity.
+            I am a PhD candidate at Purdue University, working under the mentorship of <a href="https://nanoneurotech.com/" target="_blank">Prof. Krishna Jayant</a> in the Nano Neurotechnology Lab. My research focuses on understanding the neural mechanisms of learning and decision-making by developing novel technologies and experimental protocols. I am particularly interested in how neurons communicate and coordinate across multiple modalities to perform computations that are both robust and plastic. To support this investigation, I developed a custom neural recording platform that integrates advanced electrode designs with a CMOS backend for multimodal interrogation of neural activity.
         </p>
         <p>
             I earned a dual degree (B.Tech + M.Tech) in Electrical Engineering from the Indian Institute of Technology (IIT) Bombay in August 2020. For my Master’s thesis, I worked with <a href="https://www.ee.iitb.ac.in/wiki/faculty/mshojaei" target="_blank">Prof. Maryam Shojaei Baghini</a> to design a multi-phase oscillator for next-generation 5G receivers. During my undergraduate studies, I worked under <a href="https://www.ee.iitb.ac.in/wiki/faculty/mshojaei" target="_blank">Prof. Shalabh Gupta</a> on the front-end design of an IRNSS receiver (the Indian regional navigation satellite system).
@@ -46,22 +46,82 @@
 
   <!-- Projects -->
   <section id="projects" class="fade-in">
-    <div class="sticky-header fade-on-stick"><h2>RESEARCH PROJECTS</h2></div>
-    <ul>
-      <li>Spiking Neural Network Simulation</li>
-      <li>Multimodal Neural Recording Platform</li>
-      <li>Traveling Wave Analysis in Cortical Circuits</li>
-    </ul>
+    <div class="sticky-header"><h2>RESEARCH PROJECTS</h2></div>
+  
+    <!-- Always visible projects -->
+    <div class="project-entry">
+      <img src="images/SNN.gif" alt="Spiking Neural Network" />
+      <div class="project-text">
+        <h3>Spiking Neural Network Simulation</h3>
+        <p>
+          Developed large-scale simulations of spiking neural networks using biologically inspired neuron models to understand how networks of neurons encode and process information. Explored traveling waves and synaptic plasticity mechanisms.
+        </p>
+      </div>
+    </div>
+  
+    <div class="project-entry">
+      <img src="images/MultimodalRecording.jpg" alt="Multimodal Neural Recording" />
+      <div class="project-text">
+        <h3>Multimodal Neural Recording Platform</h3>
+        <p>
+          Designed a custom implantable platform integrating transparent ECoG arrays and two-photon imaging to simultaneously capture electrical and optical neural activity in behaving mice, enabling unprecedented multimodal analysis.
+        </p>
+      </div>
+    </div>
+  
+    <div class="project-entry">
+      <img src="images/TravelingWave.jpg" alt="Traveling Waves in Cortex" />
+      <div class="project-text">
+        <h3>Traveling Wave Analysis in Cortical Circuits</h3>
+        <p>
+          Studied spatiotemporal patterns of activity propagating across the cortex, quantifying traveling wave properties during sensory processing and learning using phase gradient analysis on wideband LFP recordings.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Hidden projects -->
+    <div id="extra-projects" style="display: none;">
+      <div class="project-entry">
+        <img src="images/ClosedLoop.jpg" alt="Closed-loop Control" />
+        <div class="project-text">
+          <h3>Closed-Loop Neural Modulation</h3>
+          <p>
+            Implemented real-time signal processing for activity-dependent stimulation to investigate how closed-loop feedback influences circuit dynamics and behavioral performance.
+          </p>
+        </div>
+      </div>
+  
+      <div class="project-entry">
+        <img src="images/ProbeDesign.jpg" alt="Probe Design" />
+        <div class="project-text">
+          <h3>Flexible Neural Probe Design</h3>
+          <p>
+            Developed ultra-flexible Parylene-based electrodes with improved biocompatibility and spatial resolution for chronic implantation and recording.
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Toggle buttons -->
+    <div class="toggle-container">
+      <button id="toggleProjectsBtn" class="toggle-btn">
+        <span class="arrow">&#x25B6;</span>
+        <span class="label">Other Projects</span>
+      </button>
+    </div>
+    
   </section>
+  
+  
 
   <!-- Gallery -->
   <section id="gallery" class="fade-in">
-    <div class="sticky-header fade-on-stick"><h2>GALLERY</h2></div>
+    <div class="sticky-header"><h2>GALLERY</h2></div>
     <div class="gallery-grid">
-      <img src="images/NNT_Logo_q003.png" alt="Microscale 3D printed Jayant lab name" onclick="openLightbox(this)">
+      <img src="images/NNT_Logo_q003.png" alt="Microscale 3D printed Jayant lab initials - Nano NeuroTech Lab" onclick="openLightbox(this)">
       <img src="images/PurduePSingle_q023.png" alt="Microscopic 3D printed Purdue Logo" onclick="openLightbox(this)">
       <img src="images/MouseLeverLicking.gif" alt="Mouse performing a cue-initiated motor behaviour" onclick="openLightbox(this)">
-      <img src="images/IC.jpg" alt="Micrograph of wirebonded amplifier IC" onclick="openLightbox(this)">
+      <img src="images/IC.jpg" alt="Micrograph of wirebonded EPhys and EChem amplifier array IC tapedout in TSMC 180nm node" onclick="openLightbox(this)">
       <img src="images/GridImaging.GIF" alt="2P imaging of neurons through the transparent NeuroGrid" onclick="openLightbox(this)">
       <img src="images/GCamp6f_042023.gif" alt="2P imaging of dendrites in L1 in Motor Cortex" onclick="openLightbox(this)">
     </div>
@@ -77,7 +137,7 @@
 
   <!-- Resources -->
   <section id="resources" class="fade-in">
-    <div class="sticky-header fade-on-stick"><h2>RESOURCES / BLOG</h2></div>
+    <div class="sticky-header"><h2>RESOURCES / BLOG</h2></div>
     <ul>
       <li><a href="#">Understanding STDP</a></li>
       <li><a href="#">Motion Correction in 2P Imaging</a></li>
@@ -87,13 +147,13 @@
 
   <!-- CV -->
   <section id="cv" class="fade-in">
-    <div class="sticky-header fade-on-stick"><h2>CURRICULUM VITAE</h2></div>
+    <div class="sticky-header"><h2>CURRICULUM VITAE</h2></div>
     <p><a href="cv.pdf" target="_blank">Click here</a> to download my CV.</p>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="fade-in">
-    <div class="sticky-header fade-on-stick"><h2>CONTACT</h2></div>
+    <div class="sticky-header"><h2>CONTACT</h2></div>
     <p>Email: you@example.com</p>
     <p>GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
   </section>
@@ -219,6 +279,17 @@
       document.getElementById("lightbox-caption").textContent = img.alt;
     }
 
+    const toggleBtn = document.getElementById('toggleProjectsBtn');
+    const extraProjects = document.getElementById('extra-projects');
+    const arrow = toggleBtn.querySelector('.arrow');
+    const label = toggleBtn.querySelector('.label');
+
+    toggleBtn.addEventListener('click', () => {
+      const isVisible = extraProjects.style.display === 'block';
+      extraProjects.style.display = isVisible ? 'none' : 'block';
+      arrow.classList.toggle('rotate', !isVisible);
+      label.textContent = isVisible ? 'Other Projects' : 'Hide Projects';
+    });
   </script>
 </body>
 </html>

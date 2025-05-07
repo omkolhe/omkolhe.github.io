@@ -10,37 +10,37 @@ I am PhD candidate at Purdue University, stuyding under Prof. Krishna Jayant in 
 
 "As followers of natural science we know nothing of any relation between thoughts and the brain, except as a gross correlation in time and space." ~ Charles Scott Sherrington
 
-  <!-- Home -->
-  <section id="home" class="home-hero">
-    <div class="home-overlay">
-      <h1 class="home-title">BRAIN, BEHAVIOR,<br/>TECHNOLOGY</h1>
-      <p class="home-quote">
-        <em>"As followers of natural science we know nothing of any relation between thoughts and the brain, except as a gross correlation in time and space." ~ Charles Scott Sherrington <br/> (Still true even after about a century)
-        </em>
-      </p>
+<!-- Home -->
+<section id="home" class="home-hero">
+<div class="home-overlay">
+    <h1 class="home-title">BRAIN, BEHAVIOR,<br/>TECHNOLOGY</h1>
+    <p class="home-quote">
+    <em>"As followers of natural science we know nothing of any relation between thoughts and the brain, except as a gross correlation in time and space." ~ Charles Scott Sherrington <br/> (Still true even after about a century)
+    </em>
+    </p>
+</div>
+</section>
+
+<!-- About Me -->
+<section id="about" class="fade-in about-section">
+<div class="sticky-header fade-on-stick">
+    <h2>ABOUT ME</h2>
+</div>
+<div class="about-container">
+    <div class="about-img">
+    <img src="images/profile.jpeg" alt="Profile photo of Om Kolhe">
     </div>
-  </section>
-  
-  <!-- About Me -->
-  <section id="about" class="fade-in about-section">
-    <div class="sticky-header fade-on-stick">
-      <h2>ABOUT ME</h2>
+    <div class="about-text">
+    <p>
+        I am a PhD candidate at Purdue University, working under the mentorship of <a href="https://nanoneurotech.com/" target="_blank">Prof. Krishna Jayant</a> in the Nano Neurotechnology Lab. My research focuses on understanding the neural mechanisms of learning and decision-making by developing novel technologies and experimental protocols. I am particularly interested in how neurons communicate and coordinate across multiple modalities to perform computations that are both robust and adaptable. To support this investigation, I developed a custom neural recording platform that integrates advanced electrode designs with a CMOS backend for multimodal interrogation of neural activity.
+    </p>
+    <p>
+        I earned a dual degree (B.Tech + M.Tech) in Electrical Engineering from the Indian Institute of Technology (IIT) Bombay in August 2020. For my Master’s thesis, I worked with <a href="https://www.ee.iitb.ac.in/wiki/faculty/mshojaei" target="_blank">Prof. Maryam Shojaei Baghini</a> to design a multi-phase oscillator for next-generation 5G receivers. During my undergraduate studies, I also collaborated with <a href="https://www.ee.iitb.ac.in/wiki/faculty/mshojaei" target="_blank">Prof. Shalabh Gupta</a> on the front-end design of an IRNSS receiver (the Indian regional satellite navigation system).
+    </p>
+    <p>
+        <a href="cv.pdf" target="_blank">Download CV</a> &nbsp;|&nbsp;
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    </p>
     </div>
-    <div class="about-container">
-      <div class="about-img">
-        <img src="images/profile.jpeg" alt="Profile photo of Om Kolhe">
-      </div>
-      <div class="about-text">
-        <p>
-          I am a PhD candidate at Purdue University, working under the mentorship of <a href="https://nanoneurotech.com/" target="_blank">Prof. Krishna Jayant</a> in the Nano Neurotechnology Lab. My research focuses on understanding the neural mechanisms of learning and decision-making by developing novel technologies and experimental protocols. I am particularly interested in how neurons communicate and coordinate across multiple modalities to perform computations that are both robust and adaptable. To support this investigation, I developed a custom neural recording platform that integrates advanced electrode designs with a CMOS backend for multimodal interrogation of neural activity.
-        </p>
-        <p>
-          I earned a dual degree (B.Tech + M.Tech) in Electrical Engineering from the Indian Institute of Technology (IIT) Bombay in August 2020. For my Master’s thesis, I worked with <a href="https://www.ee.iitb.ac.in/wiki/faculty/mshojaei" target="_blank">Prof. Maryam Shojaei Baghini</a> to design a multi-phase oscillator for next-generation 5G receivers. During my undergraduate studies, I also collaborated with <a href="https://www.ee.iitb.ac.in/wiki/faculty/mshojaei" target="_blank">Prof. Shalabh Gupta</a> on the front-end design of an IRNSS receiver (the Indian regional satellite navigation system).
-        </p>
-        <p>
-          <a href="cv.pdf" target="_blank">Download CV</a> &nbsp;|&nbsp;
-          <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-        </p>
-      </div>
-    </div>
-  </section>
+</div>
+</section>
