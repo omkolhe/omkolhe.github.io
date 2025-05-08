@@ -1,4 +1,4 @@
-/* Reset & base */
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +8,7 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
   background-color: #000;
   color: #fff;
-  scroll-behavior: smooth;
-  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Sections */
@@ -199,41 +198,6 @@ a:hover {
 
 }
 
-
-/* === Home Hero Section === */
-.home-hero {
-  position: relative;
-  background: url("images/GCamp6f_042023.gif") center center / cover no-repeat;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.home-overlay {
-  background-color: rgba(0, 0, 0, 0.75);
-  padding: 60px 40px;
-  text-align: center;
-  max-width: 800px;
-  border-radius: 8px;
-}
-
-.home-title {
-  color: #00ffc3;
-  font-size: 40px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.home-quote {
-  color: #ffffff;
-  font-size: 16px;
-  font-style: italic;
-  line-height: 1.8;
-}
-
 /* === Gallery Grid === */
 .gallery-grid {
   display: grid;
@@ -347,9 +311,9 @@ display: none;
 }
 
 .project-entry img {
-  width: 300px;
+  width: 500px;
   border-radius: 10px;
-  border: 2px solid #00ffc3;
+  border: 0px solid #00ffc3;
 }
 
 .project-text {
@@ -403,3 +367,186 @@ display: none;
   transform: rotate(-90deg); /* up */
 }
 
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #000;
+  color: #fff;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.home-hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Particle container */
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  pointer-events: auto;
+}
+
+/* Overlay content */
+.home-overlay {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 60px 40px;
+  border-radius: 12px;
+  max-width: 800px;
+  text-align: center;
+
+  /* Add this line */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.home-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #00ffc3;
+  letter-spacing: 3px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.home-quote {
+  font-size: 16px;
+  font-style: italic;
+  color: #fff;
+  line-height: 1.8;
+
+  /* Add this if needed */
+  max-width: 100%;
+  overflow: visible;
+}
+
+
+.home-fadeout {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
+  z-index: 2;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.project-item h3 {
+  font-size: 20px;
+  color: #00ffc3;
+  margin: 12px 0 6px;
+  font-weight: 700;
+}
+
+.project-item p {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.project-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.project-box:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.project-box img {
+  width: 500px;
+  border-radius: 10px;
+  cursor: pointer;
+  object-fit: cover;
+  margin-left: 30px;
+}
+
+.project-content {
+  flex: 1;
+}
+
+.project-content h3 {
+  font-size: 20px;
+  color: #00ffc3;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.project-content p {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+#lightbox-project {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#lightbox-project img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 255, 195, 0.2);
+}
+
+#lightbox-caption-project {
+  color: #ccc;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 12px;
+  max-width: 80%;
+}
+
+#lightbox-project .lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 36px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}

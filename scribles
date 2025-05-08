@@ -44,3 +44,78 @@ I am PhD candidate at Purdue University, stuyding under Prof. Krishna Jayant in 
     </div>
 </div>
 </section>
+
+
+<!-- Always visible projects -->
+    <div class="project-entry">
+      <img src="images/MotorCortex.png" alt="Spiking Neural Network" />
+      <div class="project-text">
+        <h3>Spiking Neural Network Simulation</h3>
+        <p>
+          Developed large-scale simulations of spiking neural networks using biologically inspired neuron models to understand how networks of neurons encode and process information. Explored traveling waves and synaptic plasticity mechanisms.
+        </p>
+      </div>
+    </div>
+  
+    <div class="project-entry">
+      <img src="images/ChronicImaging.png" alt="Multimodal Neural Recording" />
+      <div class="project-text">
+        <h3>Multimodal Neural Recording Platform</h3>
+        <p>
+          Designed a custom implantable platform integrating transparent ECoG arrays and two-photon imaging to simultaneously capture electrical and optical neural activity in behaving mice, enabling unprecedented multimodal analysis.
+        </p>
+      </div>
+    </div>
+  
+    <div class="project-entry">
+      <img src="images/3DElectrodes.png" alt="Traveling Waves in Cortex" />
+      <div class="project-text">
+        <h3>Traveling Wave Analysis in Cortical Circuits</h3>
+        <p>
+          Studied spatiotemporal patterns of activity propagating across the cortex, quantifying traveling wave properties during sensory processing and learning using phase gradient analysis on wideband LFP recordings.
+        </p>
+      </div>
+    </div>
+
+    <div class="project-entry">
+      <img src="images/CMOSAmplifier.png" alt="Traveling Waves in Cortex" />
+      <div class="project-text">
+        <h3>Traveling Wave Analysis in Cortical Circuits</h3>
+        <p>
+          Studied spatiotemporal patterns of activity propagating across the cortex, quantifying traveling wave properties during sensory processing and learning using phase gradient analysis on wideband LFP recordings.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Hidden projects -->
+    <div id="extra-projects" style="display: none;">
+      <div class="project-entry">
+        <img src="images/CMOSAmplifier.png" alt="Closed-loop Control" />
+        <div class="project-text">
+          <h3>Closed-Loop Neural Modulation</h3>
+          <p>
+            Implemented real-time signal processing for activity-dependent stimulation to investigate how closed-loop feedback influences circuit dynamics and behavioral performance.
+          </p>
+        </div>
+      </div>
+  
+      <div class="project-entry">
+        <img src="images/ProbeDesign.jpg" alt="Probe Design" />
+        <div class="project-text">
+          <h3>Flexible Neural Probe Design</h3>
+          <p>
+            Developed ultra-flexible Parylene-based electrodes with improved biocompatibility and spatial resolution for chronic implantation and recording.
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Toggle buttons -->
+    <div class="toggle-container">
+      <button id="toggleProjectsBtn" class="toggle-btn">
+        <span class="arrow">&#x25B6;</span>
+        <span class="label">Other Projects</span>
+      </button>
+    </div>
+    
+  </section>

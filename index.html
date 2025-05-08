@@ -4,20 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Om Kolhe</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
+<!-- Project Lightbox -->
+<div id="lightbox-project">
+  <span class="lightbox-close" onclick="closeLightboxProject()">&times;</span>
+  <img id="lightbox-img-project" src="" alt="Full image">
+  <p id="lightbox-caption-project"></p>
+</div>
+
 <body>
 
-  <!-- Home -->
+  <!-- HOME SECTION -->
   <section id="home" class="home-hero">
+    <!-- Particle background only for home -->
+    <div id="particles-js"></div>
+
+    <!-- Content -->
     <div class="home-overlay">
-        <h1 class="home-title">TECHNOLOGY, BEHAVIOR,<br/>COMPUTATION</h1>
-        <p class="home-quote">
+      <h1 class="home-title">TECHNOLOGY<br/>BEHAVIOR<br/>COMPUTATION</h1>
+      <p class="home-quote">
         <em>"As followers of natural science we know nothing of any relation between thoughts and the brain, except as a gross correlation in time and space." ~ Charles Scott Sherrington <br/> (Still true even after about a century)
-        </em>
         </p>
     </div>
-    </section>
+
+    <!-- Optional fade-out effect -->
+    <div class="home-fadeout"></div>
+  </section>
+
     
     <!-- About Me -->
     <section id="about" class="fade-in about-section">
@@ -48,69 +63,57 @@
   <section id="projects" class="fade-in">
     <div class="sticky-header"><h2>RESEARCH PROJECTS</h2></div>
   
-    <!-- Always visible projects -->
-    <div class="project-entry">
-      <img src="images/SNN.gif" alt="Spiking Neural Network" />
-      <div class="project-text">
-        <h3>Spiking Neural Network Simulation</h3>
-        <p>
-          Developed large-scale simulations of spiking neural networks using biologically inspired neuron models to understand how networks of neurons encode and process information. Explored traveling waves and synaptic plasticity mechanisms.
-        </p>
-      </div>
-    </div>
-  
-    <div class="project-entry">
-      <img src="images/MultimodalRecording.jpg" alt="Multimodal Neural Recording" />
-      <div class="project-text">
-        <h3>Multimodal Neural Recording Platform</h3>
-        <p>
-          Designed a custom implantable platform integrating transparent ECoG arrays and two-photon imaging to simultaneously capture electrical and optical neural activity in behaving mice, enabling unprecedented multimodal analysis.
-        </p>
-      </div>
-    </div>
-  
-    <div class="project-entry">
-      <img src="images/TravelingWave.jpg" alt="Traveling Waves in Cortex" />
-      <div class="project-text">
-        <h3>Traveling Wave Analysis in Cortical Circuits</h3>
-        <p>
-          Studied spatiotemporal patterns of activity propagating across the cortex, quantifying traveling wave properties during sensory processing and learning using phase gradient analysis on wideband LFP recordings.
-        </p>
-      </div>
-    </div>
-  
-    <!-- Hidden projects -->
-    <div id="extra-projects" style="display: none;">
-      <div class="project-entry">
-        <img src="images/ClosedLoop.jpg" alt="Closed-loop Control" />
-        <div class="project-text">
-          <h3>Closed-Loop Neural Modulation</h3>
-          <p>
-            Implemented real-time signal processing for activity-dependent stimulation to investigate how closed-loop feedback influences circuit dynamics and behavioral performance.
-          </p>
+    <div class="project-grid" id="main-projects">
+      <div class="project-box">
+        <img src="images/MotorCortex.png" alt="Spiking Neural Network Simulation" onclick="openLightboxProject(this)" data-caption="Spiking Neural Network Simulation">
+        <div class="project-content">
+          <h3>Spiking Neural Network Simulation</h3>
+          <p>Large-scale spiking neural network model to explore coordinated activity and biological learning mechanisms.</p>
         </div>
       </div>
   
-      <div class="project-entry">
-        <img src="images/ProbeDesign.jpg" alt="Probe Design" />
-        <div class="project-text">
-          <h3>Flexible Neural Probe Design</h3>
-          <p>
-            Developed ultra-flexible Parylene-based electrodes with improved biocompatibility and spatial resolution for chronic implantation and recording.
-          </p>
+      <div class="project-box">
+        <img src="images/ChronicImaging.png" alt="Multimodal Neural Recording Platform" onclick="openLightboxProject(this)" data-caption="Multimodal Neural Recording Platform">
+        <div class="project-content">
+          <h3>Multimodal Neural Recording Platform</h3>
+          <p>Combines transparent ECoG arrays and 2P imaging for simultaneous high-resolution multimodal neural recordings.</p>
+        </div>
+      </div>
+  
+      <div class="project-box">
+        <img src="images/3DElectrodes.png" alt="Traveling Wave Analysis in Cortical Circuits" onclick="openLightboxProject(this)" data-caption="Traveling Wave Analysis in Cortical Circuits">
+        <div class="project-content">
+          <h3>Traveling Wave Analysis in Cortical Circuits</h3>
+          <p>Detection and tracking of cortical traveling waves from surface ECoG during motor learning tasks.</p>
         </div>
       </div>
     </div>
   
-    <!-- Toggle buttons -->
-    <div class="toggle-container">
-      <button id="toggleProjectsBtn" class="toggle-btn">
-        <span class="arrow">&#x25B6;</span>
-        <span class="label">Other Projects</span>
+    <div class="project-grid" id="hidden-projects" style="display: none;">
+      <div class="project-box">
+        <img src="images/CMOSAmplifier.png" alt="Flexible Laminar Probes" onclick="openLightboxProject(this)" data-caption="Flexible Laminar Probes">
+        <div class="project-content">
+          <h3>Flexible Laminar Probes</h3>
+          <p>Implantable flexible neural probes for chronic laminar recordings in awake behaving mice.</p>
+        </div>
+      </div>
+  
+      <div class="project-box">
+        <img src="images/project5.jpg" alt="Closed-loop Behavioral Control" onclick="openLightboxProject(this)" data-caption="Closed-loop Behavioral Control">
+        <div class="project-content">
+          <h3>Closed-loop Behavioral Control</h3>
+          <p>Real-time tracking and adaptive stimulation system for precision behavioral feedback control.</p>
+        </div>
+      </div>
+    </div>
+  
+    <div style="text-align: center; margin-top: 20px;">
+      <button id="toggleProjectsBtn" onclick="toggleProjects()" style="background-color: rgba(0,255,195,0.1); color: #00ffc3; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer;">
+        <span id="toggleArrow">▼</span> Other Projects
       </button>
     </div>
-    
   </section>
+  
   
   
 
@@ -182,7 +185,7 @@
   <script>
     const galleryImages = Array.from(document.querySelectorAll('.gallery-grid img'));
     let currentIndex = 0;
-
+    
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener("click", function (e) {
@@ -290,6 +293,85 @@
       arrow.classList.toggle('rotate', !isVisible);
       label.textContent = isVisible ? 'Other Projects' : 'Hide Projects';
     });
+
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 125, density: { enable: true, value_area: 800 } },
+        color: { value: "#00ffc3" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3, random: true },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#00ffc3",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" }
+        },
+        modes: {
+          repulse: { distance: 100 },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+
+    const projectImages = Array.from(document.querySelectorAll('.project-grid img'));
+
+    function openLightboxProject(img) {
+      const lightbox = document.getElementById("lightbox-project");
+      const imgEl = document.getElementById("lightbox-img-project");
+      const captionEl = document.getElementById("lightbox-caption-project");
+
+      imgEl.src = img.src;
+      captionEl.textContent = img.getAttribute("data-caption") || img.alt;
+      lightbox.style.display = "flex";
+    }
+
+    function closeLightboxProject() {
+      document.getElementById("lightbox-project").style.display = "none";
+    }
+
+
+    function showLightboxImageProject() {
+      const img = projectImages[currentIndex];
+      document.getElementById("lightbox-img").src = img.src;
+      document.getElementById("lightbox-caption").textContent = img.getAttribute("data-caption") || img.alt;
+    }
+
+
+    function toggleProjects() {
+      const hidden = document.getElementById("hidden-projects");
+      const btn = document.getElementById("toggleProjectsBtn");
+      const arrow = document.getElementById("toggleArrow");
+
+      if (hidden.style.display === "none") {
+        hidden.style.display = "grid";
+        btn.innerHTML = '<span id="toggleArrow">&#x25B2;</span> Hide Projects';
+      } else {
+        hidden.style.display = "none";
+        btn.innerHTML = '<span id="toggleArrow">&#x25BC;</span> Other Projects';
+      }
+    }
+    document.addEventListener("keydown", function (event) {
+    const projectLightbox = document.getElementById("lightbox-project");
+    if (projectLightbox.style.display === "flex" && event.key === "Escape") {
+      closeLightboxProject();
+    }
+  });
+
   </script>
 </body>
 </html>
