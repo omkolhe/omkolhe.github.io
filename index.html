@@ -65,10 +65,12 @@
   
     <div class="project-grid" id="main-projects">
       <div class="project-box">
-        <img src="images/MotorCortex.png" alt="Spiking Neural Network Simulation" onclick="openLightboxProject(this)" data-caption="Spiking Neural Network Simulation">
+        <img src="images/MotorCortex.png" alt="Mechanisms underlying reliable motor output" onclick="openLightboxProject(this)" data-caption="Mechanisms underlying reliable motor output">
         <div class="project-content">
-          <h3>Spiking Neural Network Simulation</h3>
-          <p>Large-scale spiking neural network model to explore coordinated activity and biological learning mechanisms.</p>
+          <h3>Mechanisms underlying reliable motor output</h3>
+          <p align="justify">I am currently investigating the neural basis of skilled movement. Most brain functions rely on interactions between multiple, functionally distinct regions, and the execution of reliable, goal-directed actions requires the coordinated activity of several neural populations. Despite their importance, the mechanisms that enable precise and consistent communication between neuronal groups separated by millimeters remain poorly understood.</p>
+          <br>
+          <p><u> In collabration with <a href="https://www.hammadfkhan.com/" target="_blank">Hammad Khan</a></u></p>
         </div>
       </div>
   
@@ -76,34 +78,47 @@
         <img src="images/ChronicImaging.png" alt="Multimodal Neural Recording Platform" onclick="openLightboxProject(this)" data-caption="Multimodal Neural Recording Platform">
         <div class="project-content">
           <h3>Multimodal Neural Recording Platform</h3>
-          <p>Combines transparent ECoG arrays and 2P imaging for simultaneous high-resolution multimodal neural recordings.</p>
+          <p align="justify">We present a chronic multimodal platform capable of long-term, simultaneous electrophysiological recording and two-photon calcium imaging. We fabricated 32-channel transparent and flexible surface μECoG arrays, enabling optical access for two-photon imaging through the grid. Using this platform, we investigated the evolution of surface potentials and neural ensemble dynamics throughout the course of motor learning.</p>
+          <br>
+          <p><u> In collabration with <a href="https://www.linkedin.com/in/alecbooth/" target="_blank">Alec Booth</a></u></p>
+          <br>
+          <p> Accepted for an Oral Presentation in The 23rd International Conference on Solid-State Sensors,Actuators and Microsystems</p>
         </div>
       </div>
   
       <div class="project-box">
-        <img src="images/3DElectrodes.png" alt="Traveling Wave Analysis in Cortical Circuits" onclick="openLightboxProject(this)" data-caption="Traveling Wave Analysis in Cortical Circuits">
+        <img src="images/3DElectrodes.png" alt="3D electrodes for mapping layer specific dynamics" onclick="openLightboxProject(this)" data-caption="Traveling Wave Analysis in Cortical Circuits">
         <div class="project-content">
-          <h3>Traveling Wave Analysis in Cortical Circuits</h3>
-          <p>Detection and tracking of cortical traveling waves from surface ECoG during motor learning tasks.</p>
+          <h3>3D electrodes for mapping cortical dynamics</h3>
+          <p align="justify">Conventional electrodes are limited to recording in only one or two dimensions. We are developing a three-dimensional electrode array capable of capturing electrical activity across an entire 3D volume of brain tissue. </p>
+        </div>
+      </div>
+
+      <div class="project-box">
+        <img src="images/CMOSAmplifier.png" alt="ASIC for simultaneous electrophysiology and electrochemistry" onclick="openLightboxProject(this)" data-caption="Flexible Laminar Probes">
+        <div class="project-content">
+          <h3>ASIC for simultaneous electrophysiology and electrochemistry</h3>
+          <p align="justify">Neurons communicate through multiple modalities, including electrical spiking activity and chemical signaling via neuromodulators such as dopamine. Dopamine plays a key role in learning and reward-based reinforcement, yet its precise effects on neural activity remain poorly understood. The application-specific integrated circuit (ASIC) developed in this project enables simultaneous electrophysiological and electrochemical recordings. This dual capability allows us to detect subtle fluctuations in dopamine levels and directly examine their influence on neural dynamics. </p>
         </div>
       </div>
     </div>
   
     <div class="project-grid" id="hidden-projects" style="display: none;">
-      <div class="project-box">
-        <img src="images/CMOSAmplifier.png" alt="Flexible Laminar Probes" onclick="openLightboxProject(this)" data-caption="Flexible Laminar Probes">
-        <div class="project-content">
-          <h3>Flexible Laminar Probes</h3>
-          <p>Implantable flexible neural probes for chronic laminar recordings in awake behaving mice.</p>
-        </div>
-      </div>
   
       <div class="project-box">
-        <img src="images/project5.jpg" alt="Closed-loop Behavioral Control" onclick="openLightboxProject(this)" data-caption="Closed-loop Behavioral Control">
+        <img src="images/ILRO.png" alt="Injection Locked Ring Oscillator (ILRO) for 5G Receivers" onclick="openLightboxProject(this)" data-caption="Closed-loop Behavioral Control">
         <div class="project-content">
-          <h3>Closed-loop Behavioral Control</h3>
-          <p>Real-time tracking and adaptive stimulation system for precision behavioral feedback control.</p>
+          <h3>Injection Locked Ring Oscillator (ILRO) for 5G Receivers</h3>
+          <p align="justify">This project aimed to design a low-power, low-phase-noise multiphase oscillator for N-Path filters. An 8-phase clock was generated using an injection-locked ring VCO synchronized with an on-chip LC oscillator. A 4-stage ring oscillator with sub-feedback loops achieved a 0.9–2.8 GHz tuning range. Phase noise was further reduced using a current-reuse LC oscillator with bondwire inductance, modeled and verified in HFSS. The design was taped out in UMC 65nm node.</p>
         </div>
+      </div>
+
+      <div class="project-box">
+          <img src="images/IRNSS.png" alt="Front-end for IRNSS Receiver" onclick="openLightboxProject(this)" data-caption="Closed-loop Behavioral Control">
+          <div class="project-content">
+            <h3>Front-end for IRNSS Receiver</h3>
+            <p align="justify">This project aimed to develop a functional receiver for the Indian Regional Navigation Satellite System (IRNSS/NavIC) to support civil navigation. It involved designing and testing an S-band antenna and RF front-end circuitry for signal amplification, filtering, and downconversion. The system successfully received and decoded navigation signals from all IRNSS satellites, demonstrating the viability of the custom receiver design.</p>
+          </div>
       </div>
     </div>
   
@@ -138,28 +153,55 @@
     
   </section>
 
-  <!-- Resources -->
-  <section id="resources" class="fade-in">
-    <div class="sticky-header"><h2>RESOURCES / BLOG</h2></div>
-    <ul>
-      <li><a href="#">Understanding STDP</a></li>
-      <li><a href="#">Motion Correction in 2P Imaging</a></li>
-      <li><a href="#">Flexible Neural Probe Design</a></li>
-    </ul>
-  </section>
+<!-- Experience -->
+<section id="experience" class="fade-in">
+  <div class="sticky-header"><h2>EXPERIENCE</h2></div>
+
+  <h3>Internships</h3>
+  <ul>
+    <li>Summer Research Intern at <b>Sony Japan</b> (Summer 2018) - Develolped SDR for Sony's TV Tuner IC</li>
+  </ul>
+
+  <h3>Teaching Assistant</h3>
+  <ul>
+    <li><b>BME695</b>: Bioelectronics (Spring 2025, Purdue) - Prof. Krishna Jayant</li>
+    <li><b>BME330</b>: Bioelectrivity (Fall 2024, Purdue) - Prof. Krishna Jayant</li>
+    <li><b>BME301</b>: Bioelectrivity (Fall 2023, Purdue) - Prof. Krishna Jayant</li>
+    <li><b>BME301</b>: Bioelectrivity (Fall 2022, Purdue) - Prof. Krishna Jayant</li>
+    <li><b>EE719</b>: Mixed Signal IC Design (Spring 2020, IIT Bombay) - Prof. Maryam Shojaei Baghini</li>
+    <li><b>EE721</b>: Hardware Description Languages (Fall 2019, IIT Bombay) - Prof. Sachin Patkar</li>
+  </ul>
+
+  <h3>IIT Bombay Student Satellite Project (IITBSSP)</h3>
+  <ul>
+    <li>
+      <b>Head of the Communication Subsystem</b>: Led a team and contributed to the design and testing of the satellite’s communication subsystem.
+      <br/>
+      <span>Learn more at the 
+        <a href="https://www.aero.iitb.ac.in/satlab/" target="_blank">official website</a> and the 
+        <a href="https://www.aero.iitb.ac.in/satelliteWiki/index.php/Satellite_101" target="_blank">project wiki</a>.
+      </span>
+    </li>
+  </ul>
+
+</section>
+
 
   <!-- CV -->
   <section id="cv" class="fade-in">
     <div class="sticky-header"><h2>CURRICULUM VITAE</h2></div>
-    <p><a href="cv.pdf" target="_blank">Click here</a> to download my CV.</p>
+    <p><a href="cv.pdf" target="_blank">Click here</a> to download my CV (Last updated 2020).</p>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="fade-in">
     <div class="sticky-header"><h2>CONTACT</h2></div>
-    <p>Email: you@example.com</p>
-    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
+    <p>Email: okolhe@purdue.edu</p>
+    <p>GitHub: <a href="https://github.com/omkolhe" target="_blank">omkolhe</a></p>
   </section>
+
+  <!-- Spacer -->
+  <div style="height: 200px;"></div>
 
   <!-- Scroll to Top -->
   <button id="scrollTopBtn" title="Go to top">↑</button>
@@ -172,7 +214,7 @@
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#projects">PROJECTS</a></li>
         <li><a href="#gallery">GALLERY</a></li>
-        <li><a href="#resources">RESOURCES</a></li>
+        <li><a href="#experience">EXPERIENCE</a></li>
         <li><a href="#cv">CV</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
@@ -239,11 +281,23 @@
         navHidden = true;
       }
     });
+    let hoverHideTimeout;
+
+    // Show nav on mouse enter
     document.querySelector(".nav-reveal-zone").addEventListener("mouseenter", () => {
+      clearTimeout(hoverHideTimeout);
       nav.classList.remove("hidden");
+      navHidden = false;
     });
+
+    // Hide nav after delay when mouse leaves
     document.querySelector(".nav-reveal-zone").addEventListener("mouseleave", () => {
-      if (window.scrollY > 100) nav.classList.add("hidden");
+      if (window.scrollY > 100) {
+        hoverHideTimeout = setTimeout(() => {
+          nav.classList.add("hidden");
+          navHidden = true;
+        }, 1500); // 3000 ms = 3 seconds delay after hover ends
+      }
     });
 
     // Sticky header animation
