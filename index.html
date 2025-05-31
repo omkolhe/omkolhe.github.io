@@ -516,6 +516,28 @@
     }
   });
 
+  document.addEventListener("DOMContentLoaded", () => {
+    const titleEl = document.getElementById("brainTitle");
+    const fullText = "BRAIN-DRIVEN TECHNOLOGY";
+    let index = 0;
+
+    titleEl.textContent = "";
+    titleEl.classList.add("typing-cursor"); // Start cursor animation
+
+    function typeChar() {
+      if (index < fullText.length) {
+        titleEl.textContent += fullText.charAt(index);
+        index++;
+        setTimeout(typeChar, 80);
+      } else {
+        setTimeout(() => {
+          titleEl.classList.remove("typing-cursor"); // Hide cursor
+        }, 2000);
+      }
+    }
+
+    typeChar();
+  });
 
 
 

@@ -470,6 +470,28 @@ body {
   pointer-events: none;
 }
 
+.home-title::after {
+  content: "_";
+  animation: blink 1s step-end infinite;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  from, to { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+.typing-cursor::after {
+  content: "_";
+  margin-left: 6px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 0.1; }
+}
+
 
 .home-quote {
   position: fixed;
