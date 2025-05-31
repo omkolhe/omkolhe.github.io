@@ -1,121 +1,1231 @@
-About me 
-
-I am PhD candidate at Purdue University, stuyding under Prof. Krishna Jayant in the Nano Neurotechnology Lab. My research efforts focusses on understanding learning and decision making by developing novel technoolgies and protocols. 
-
-
-
-
-
-
-
-"As followers of natural science we know nothing of any relation between thoughts and the brain, except as a gross correlation in time and space." ~ Charles Scott Sherrington
-
-<!-- Home -->
-<section id="home" class="home-hero">
-<div class="home-overlay">
-    <h1 class="home-title">BRAIN, BEHAVIOR,<br/>TECHNOLOGY</h1>
-    <p class="home-quote">
-    <em>"As followers of natural science we know nothing of any relation between thoughts and the brain, except as a gross correlation in time and space." ~ Charles Scott Sherrington <br/> (Still true even after about a century)
-    </em>
-    </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Om Kolhe</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+</head>
+<!-- Project Lightbox -->
+<div id="lightbox-project">
+  <span class="lightbox-close" onclick="closeLightboxProject()">&times;</span>
+  <img id="lightbox-img-project" src="" alt="Full image">
+  <p id="lightbox-caption-project"></p>
 </div>
-</section>
 
-<!-- About Me -->
-<section id="about" class="fade-in about-section">
-<div class="sticky-header fade-on-stick">
-    <h2>ABOUT ME</h2>
-</div>
-<div class="about-container">
-    <div class="about-img">
-    <img src="images/profile.jpeg" alt="Profile photo of Om Kolhe">
-    </div>
-    <div class="about-text">
-    <p>
-        I am a PhD candidate at Purdue University, working under the mentorship of <a href="https://nanoneurotech.com/" target="_blank">Prof. Krishna Jayant</a> in the Nano Neurotechnology Lab. My research focuses on understanding the neural mechanisms of learning and decision-making by developing novel technologies and experimental protocols. I am particularly interested in how neurons communicate and coordinate across multiple modalities to perform computations that are both robust and adaptable. To support this investigation, I developed a custom neural recording platform that integrates advanced electrode designs with a CMOS backend for multimodal interrogation of neural activity.
-    </p>
-    <p>
-        I earned a dual degree (B.Tech + M.Tech) in Electrical Engineering from the Indian Institute of Technology (IIT) Bombay in August 2020. For my Master’s thesis, I worked with <a href="https://www.ee.iitb.ac.in/wiki/faculty/mshojaei" target="_blank">Prof. Maryam Shojaei Baghini</a> to design a multi-phase oscillator for next-generation 5G receivers. During my undergraduate studies, I also collaborated with <a href="https://www.ee.iitb.ac.in/wiki/faculty/mshojaei" target="_blank">Prof. Shalabh Gupta</a> on the front-end design of an IRNSS receiver (the Indian regional satellite navigation system).
-    </p>
-    <p>
-        <a href="cv.pdf" target="_blank">Download CV</a> &nbsp;|&nbsp;
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-    </p>
-    </div>
-</div>
-</section>
+<body>
 
+  <!-- HOME SECTION -->
+  <section id="home" class="home-hero">
+    <!-- Particle background only for home -->
+    <div id="particles-js"></div>
 
-<!-- Always visible projects -->
-    <div class="project-entry">
-      <img src="images/MotorCortex.png" alt="Spiking Neural Network" />
-      <div class="project-text">
-        <h3>Spiking Neural Network Simulation</h3>
-        <p>
-          Developed large-scale simulations of spiking neural networks using biologically inspired neuron models to understand how networks of neurons encode and process information. Explored traveling waves and synaptic plasticity mechanisms.
+    <!-- Content -->
+    <div class="home-overlay">
+      <h1 class="home-title">BRAIN-DRIVEN TECHNOLOGY</h1>
+      <p class="home-quote">
+        <em>"As followers of natural science we know nothing of any relation between thoughts and the brain<br>, except as a gross correlation in time and space." ~ Charles Scott Sherrington 
         </p>
-      </div>
     </div>
+
+    <!-- Optional fade-out effect -->
+    <div class="home-fadeout"></div>
+  </section>
+    
+    <!-- About Me -->
+    <section id="about" class="fade-in about-section">
+    <div class="sticky-header">
+        <h2>ABOUT ME</h2>
+        <p class="about-name">Om Kolhe</p>
+      </div>
+    <div class="about-container">
+        <div class="about-img">
+        <img src="images/profile.jpeg" alt="Profile photo of Om Kolhe">
+        </div>
+        <div class="about-text">
+        <p>
+            I am a PhD candidate at Purdue University, working under the mentorship of <a href="https://nanoneurotech.com/" target="_blank">Prof. Krishna Jayant</a> in the Nano Neurotechnology Lab. My research focuses on understanding the neural mechanisms of learning and decision-making by developing novel technologies and experimental protocols. I am particularly interested in how neurons communicate and coordinate across multiple modalities to perform computations that are both robust and plastic. To support this investigation, I developed a custom neural recording platform that integrates advanced electrode designs with a CMOS backend for multimodal interrogation of neural activity.
+        </p>
+        <p>
+            I earned a dual degree (B.Tech + M.Tech) in Electrical Engineering from the Indian Institute of Technology (IIT) Bombay in August 2020. For my Master’s thesis, I worked with <a href="https://www.ee.iitb.ac.in/wiki/faculty/mshojaei" target="_blank">Prof. Maryam Shojaei Baghini</a> to design a multi-phase oscillator for next-generation 5G receivers. During my undergraduate studies, I worked under <a href="https://www.ee.iitb.ac.in/wiki/faculty/mshojaei" target="_blank">Prof. Shalabh Gupta</a> on the front-end design of an IRNSS receiver (the Indian regional navigation satellite system).
+        </p>
+        <!-- <p>
+            <a href="cv.pdf" target="_blank">Download CV</a> &nbsp;|&nbsp;
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        </p> -->
+        </div>
+    </div>
+    </section>  
+
+  <!-- Projects -->
+  <section id="projects" class="fade-in">
+    <div class="sticky-header"><h2>RESEARCH PROJECTS</h2></div>
   
-    <div class="project-entry">
-      <img src="images/ChronicImaging.png" alt="Multimodal Neural Recording" />
-      <div class="project-text">
-        <h3>Multimodal Neural Recording Platform</h3>
-        <p>
-          Designed a custom implantable platform integrating transparent ECoG arrays and two-photon imaging to simultaneously capture electrical and optical neural activity in behaving mice, enabling unprecedented multimodal analysis.
-        </p>
-      </div>
-    </div>
-  
-    <div class="project-entry">
-      <img src="images/3DElectrodes.png" alt="Traveling Waves in Cortex" />
-      <div class="project-text">
-        <h3>Traveling Wave Analysis in Cortical Circuits</h3>
-        <p>
-          Studied spatiotemporal patterns of activity propagating across the cortex, quantifying traveling wave properties during sensory processing and learning using phase gradient analysis on wideband LFP recordings.
-        </p>
-      </div>
-    </div>
-
-    <div class="project-entry">
-      <img src="images/CMOSAmplifier.png" alt="Traveling Waves in Cortex" />
-      <div class="project-text">
-        <h3>Traveling Wave Analysis in Cortical Circuits</h3>
-        <p>
-          Studied spatiotemporal patterns of activity propagating across the cortex, quantifying traveling wave properties during sensory processing and learning using phase gradient analysis on wideband LFP recordings.
-        </p>
-      </div>
-    </div>
-  
-    <!-- Hidden projects -->
-    <div id="extra-projects" style="display: none;">
-      <div class="project-entry">
-        <img src="images/CMOSAmplifier.png" alt="Closed-loop Control" />
-        <div class="project-text">
-          <h3>Closed-Loop Neural Modulation</h3>
-          <p>
-            Implemented real-time signal processing for activity-dependent stimulation to investigate how closed-loop feedback influences circuit dynamics and behavioral performance.
-          </p>
+    <div class="project-grid" id="main-projects">
+      <div class="project-box">
+        <img src="images/MotorCortex.png" alt="Mechanisms underlying reliable motor output" onclick="openLightboxProject(this)" data-caption="Mechanisms underlying reliable motor output">
+        <div class="project-content">
+          <h3>Mechanisms underlying reliable motor output</h3>
+          <p align="justify">I am currently investigating the neural basis of skilled movement. Most brain functions rely on interactions between multiple, functionally distinct regions, and the execution of reliable, goal-directed actions requires the coordinated activity of several neural populations. Despite their importance, the mechanisms that enable precise and consistent communication between neuronal groups separated by millimeters remain poorly understood.</p>
+          <br>
+          <p><u> In collabration with <a href="https://www.hammadfkhan.com/" target="_blank">Hammad Khan</a></u></p>
         </div>
       </div>
   
-      <div class="project-entry">
-        <img src="images/ProbeDesign.jpg" alt="Probe Design" />
-        <div class="project-text">
-          <h3>Flexible Neural Probe Design</h3>
-          <p>
-            Developed ultra-flexible Parylene-based electrodes with improved biocompatibility and spatial resolution for chronic implantation and recording.
-          </p>
+      <div class="project-box">
+        <img src="images/ChronicImaging.png" alt="Multimodal Neural Recording Platform" onclick="openLightboxProject(this)" data-caption="Multimodal Neural Recording Platform">
+        <div class="project-content">
+          <h3>Multimodal Neural Recording Platform</h3>
+          <p align="justify">We present a chronic multimodal platform capable of long-term, simultaneous electrophysiological recording and two-photon calcium imaging. We fabricated 32-channel transparent and flexible surface μECoG arrays, enabling optical access for two-photon imaging through the grid. Using this platform, we investigated the evolution of surface potentials and neural ensemble dynamics throughout the course of motor learning.</p>
+          <br>
+          <p><u> In collabration with <a href="https://www.linkedin.com/in/alecbooth/" target="_blank">Alec Booth</a></u></p>
+          <br>
+          <p> Accepted for an Oral Presentation in The 23rd International Conference on Solid-State Sensors,Actuators and Microsystems</p>
+        </div>
+      </div>
+  
+      <div class="project-box">
+        <img src="images/3DElectrodes.png" alt="3D electrodes for mapping layer specific dynamics" onclick="openLightboxProject(this)" data-caption="Traveling Wave Analysis in Cortical Circuits">
+        <div class="project-content">
+          <h3>3D electrodes for mapping cortical dynamics</h3>
+          <p align="justify">Conventional electrodes are limited to recording in only one or two dimensions. We are developing a three-dimensional electrode array capable of capturing electrical activity across an entire 3D volume of brain tissue. </p>
+        </div>
+      </div>
+
+      <div class="project-box">
+        <img src="images/CMOSAmplifier.png" alt="ASIC for simultaneous electrophysiology and electrochemistry" onclick="openLightboxProject(this)" data-caption="Flexible Laminar Probes">
+        <div class="project-content">
+          <h3>ASIC for simultaneous electrophysiology and electrochemistry</h3>
+          <p align="justify">Neurons communicate through multiple modalities, including electrical spiking activity and chemical signaling via neuromodulators such as dopamine. Dopamine plays a key role in learning and reward-based reinforcement, yet its precise effects on neural activity remain poorly understood. The application-specific integrated circuit (ASIC) developed in this project enables simultaneous electrophysiological and electrochemical recordings. This dual capability allows us to detect subtle fluctuations in dopamine levels and directly examine their influence on neural dynamics. </p>
         </div>
       </div>
     </div>
   
-    <!-- Toggle buttons -->
-    <div class="toggle-container">
-      <button id="toggleProjectsBtn" class="toggle-btn">
-        <span class="arrow">&#x25B6;</span>
-        <span class="label">Other Projects</span>
+    <div class="project-grid" id="hidden-projects" style="display: none;">
+  
+      <div class="project-box">
+        <img src="images/ILRO.png" alt="Injection Locked Ring Oscillator (ILRO) for 5G Receivers" onclick="openLightboxProject(this)" data-caption="Closed-loop Behavioral Control">
+        <div class="project-content">
+          <h3>Injection Locked Ring Oscillator (ILRO) for 5G Receivers</h3>
+          <p align="justify">This project aimed to design a low-power, low-phase-noise multiphase oscillator for N-Path filters. An 8-phase clock was generated using an injection-locked ring VCO synchronized with an on-chip LC oscillator. A 4-stage ring oscillator with sub-feedback loops achieved a 0.9–2.8 GHz tuning range. Phase noise was further reduced using a current-reuse LC oscillator with bondwire inductance, modeled and verified in HFSS. The design was taped out in UMC 65nm node.</p>
+        </div>
+      </div>
+
+      <div class="project-box">
+          <img src="images/IRNSS.png" alt="Front-end for IRNSS Receiver" onclick="openLightboxProject(this)" data-caption="Closed-loop Behavioral Control">
+          <div class="project-content">
+            <h3>Front-end for IRNSS Receiver</h3>
+            <p align="justify">This project aimed to develop a functional receiver for the Indian Regional Navigation Satellite System (IRNSS/NavIC) to support civil navigation. It involved designing and testing an S-band antenna and RF front-end circuitry for signal amplification, filtering, and downconversion. The system successfully received and decoded navigation signals from all IRNSS satellites, demonstrating the viability of the custom receiver design.</p>
+          </div>
+      </div>
+    </div>
+  
+    <div style="text-align: center; margin-top: 20px;">
+      <button id="toggleProjectsBtn" onclick="toggleProjects()" style="background-color: rgba(0,255,195,0.1); color: #00ffc3; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer;">
+        <span id="toggleArrow">▼</span> Other Projects
       </button>
+    </div>
+  </section>
+  
+  
+  
+
+  <!-- Gallery -->
+  <section id="gallery" class="fade-in">
+    <div class="sticky-header"><h2>GALLERY</h2></div>
+    <div class="gallery-grid">
+      <img src="images/NNT_Logo_q003.png" alt="Microscale 3D printed Jayant lab initials - Nano NeuroTech Lab" onclick="openLightbox(this)">
+      <img src="images/PurduePSingle_q023.png" alt="Microscopic 3D printed Purdue Logo" onclick="openLightbox(this)">
+      <!-- <img src="images/MouseLeverLicking.gif" alt="Mouse performing a cue-initiated motor behaviour" onclick="openLightbox(this)"> -->
+      <img src="images/IC.jpg" alt="Micrograph of wirebonded EPhys and EChem amplifier array IC tapedout in TSMC 180nm node" onclick="openLightbox(this)">
+      <img src="images/GridImaging.GIF" alt="2P imaging of neurons through the transparent NeuroGrid" onclick="openLightbox(this)">
+      <img src="images/GCamp6f_042023.gif" alt="2P imaging of dendrites in L1 in Motor Cortex" onclick="openLightbox(this)">
+    </div>
+    <div id="lightbox">
+      <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+      <span class="lightbox-nav left" onclick="navigateLightbox(-1)">&#10094;</span>
+      <img id="lightbox-img" src="" alt="Full image">
+      <p id="lightbox-caption"></p>
+      <span class="lightbox-nav right" onclick="navigateLightbox(1)">&#10095;</span>
     </div>
     
   </section>
+
+
+<!-- Publications -->
+<section id="publications" class="fade-in">
+  <div class="sticky-header"><h2>PUBLICATIONS AND PRESENTATIONS</h2></div>
+
+  <h3>Publications</h3>
+  <ul>
+    <li> <b>Om T. Kolhe</b>*, Alec C. Booth*, Hammad F. Khan, Krishna Jayant. “A chronic multimodel platform for simultaneous electrophysiology and calcium imaging during motor behaviour”, Tranducers 2025 (Accepted for Oral Presentation).</li>
+    <li> A. Booth, Hammad F. Khan, <b>Om T. Kolhe</b>, and Krishna Jayant. “Implantation of Flexible Electrodes for Simultaneous In-Vivo Extracellular Recording and Two-Photon Imaging”, Proceedings of IMPRS 6 (1), 2023.</li>
+  </ul>
+
+  <h3>Patents</h3>
+  <ul>
+    <li>Krishna Jayant, <b>Om T. Kolhe</b>, Daniel L. Gonzales, and Hammad F. Khan. “2D and 3D Neural Electrodes and Methods Thereof.” US Patent #63/542,491, 2024 </li>
+    <li>Krishna Jayant, <b>Om T. Kolhe</b>, “Integrated chip-scale electrophysiology and electrochemistry detection and amplifying apparatus, system, and method for use thereof” (provisional PURD-152/00US 28593/710) </li>
+  </ul>
+
+  <h3>Conferences</h3>
+  <ul>
+    <li> Hammad F. Khan*, <b>Om T. Kolhe</b>*, M. Habibimatin, E. F. Tanase, Krishna Jayant. "Traveling waves support dynamic rerouting of communication subspaces across the motor cortical hierarchy", SfN Barrels Conference (Talk), Chicago, IL, October 2024.</li>
+    <li> <b>Om T. Kolhe</b>*, Hammad F. Khan*, M. Habibimatin, E. F. Tanase, Krishna Jayant. "Traveling waves enable reliable volitional motor movement", SfN Conference (Poster), Chicago, IL, October 2024.</li>
+    <li> Hammad F. Khan*, <b>Om T. Kolhe</b>*, Meiseim Habibimatin, Krishna Jayant. "Traveling waves gate reliable volitional motor movement", SfN Barrels Conference (Poster), Baltimore, MD, November 2023. </li>
+  </ul>
+
+</section>
+
+<!-- Experience -->
+<section id="experience" class="fade-in">
+  <div class="sticky-header"><h2>EXPERIENCE</h2></div>
+
+  <h3>Internships</h3>
+  <ul>
+    <li>Summer Research Intern at <b>Sony Japan</b> (Summer 2018) - Develolped SDR for Sony's TV Tuner IC</li>
+  </ul>
+
+  <h3>Teaching Assistant</h3>
+  <ul>
+    <li><b>BME695</b>: Bioelectronics (Spring 2025, Purdue) - Prof. Krishna Jayant</li>
+    <li><b>BME330</b>: Bioelectricity (Fall 2024, Purdue) - Prof. Krishna Jayant</li>
+    <li><b>BME301</b>: Bioelectricity (Fall 2023, Purdue) - Prof. Krishna Jayant</li>
+    <li><b>BME301</b>: Bioelectricity (Fall 2022, Purdue) - Prof. Krishna Jayant</li>
+    <li><b>EE719</b>: Mixed Signal IC Design (Spring 2020, IIT Bombay) - Prof. Maryam Shojaei Baghini</li>
+    <li><b>EE721</b>: Hardware Description Languages (Fall 2019, IIT Bombay) - Prof. Sachin Patkar</li>
+  </ul>
+
+  <h3>IIT Bombay Student Satellite Project (IITBSSP)</h3>
+  <ul>
+    <li>
+      <b>Head of the Communication Subsystem</b>: Led a team and contributed to the design and testing of the satellite’s communication subsystem.
+      <br/>
+      <span>Learn more at the 
+        <a href="https://www.aero.iitb.ac.in/satlab/" target="_blank">official website</a> and the 
+        <a href="https://www.aero.iitb.ac.in/satelliteWiki/index.php/Satellite_101" target="_blank">project wiki</a>.
+      </span>
+    </li>
+  </ul>
+
+</section>
+
+  <!-- CV -->
+  <section id="cv" class="fade-in">
+    <div class="sticky-header"><h2>CURRICULUM VITAE</h2></div>
+    <p><a href="cv.pdf" target="_blank">Click here</a> to download my CV (Last updated 2020).</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="fade-in">
+    <div class="sticky-header"><h2>CONTACT</h2></div>
+    <div class="contact-container">
+      <div class="contact-item">
+        <a href="mailto:okolhe@purdue.edu" target="_blank">
+          <img src="images/email-icon.svg" alt="Email icon" />
+          <span>okolhe@purdue.edu</span>
+        </a>
+      </div>
+      <div class="contact-item">
+        <a href="https://github.com/omkolhe" target="_blank">
+          <img src="images/github-icon.svg" alt="GitHub icon" />
+          <span>https://github.com/omkolhe</span>
+        </a>
+      </div>
+      <div class="contact-item">
+        <a href="https://linkedin.com/in/om-kolhe" target="_blank">
+          <img src="images/linkedin-icon.svg" alt="LinkedIn icon" />
+          <span>linkedin.com/in/om-kolhe/</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Spacer -->
+  <div style="height: 200px;"></div>
+
+  <!-- Scroll to Top -->
+  <button id="scrollTopBtn" title="Go to top">↑</button>
+
+  <!-- Navigation -->
+  <div class="nav-reveal-zone">
+    <nav class="floating-nav" id="smartNav">
+      <ul class="nav-list">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
+        <li><a href="#publications">PUBLICATIONS</a></li>
+        <li><a href="#experience">EXPERIENCE</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Scripts -->
+
+  
+  <script>
+    const galleryImages = Array.from(document.querySelectorAll('.gallery-grid img'));
+    let currentIndex = 0;
+    
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          window.scrollTo({ top: target.offsetTop - 80, behavior: "smooth" });
+        }
+      });
+    });
+
+    // Keyboard controls
+    document.addEventListener("keydown", function (event) {
+      const lightbox = document.getElementById("lightbox");
+      if (lightbox.style.display === "flex") {
+        if (event.key === "ArrowLeft") {
+          navigateLightbox(-1);
+        } else if (event.key === "ArrowRight") {
+          navigateLightbox(1);
+        } else if (event.key === "Escape") {
+          closeLightbox();
+        }
+      }
+    });
+
+    // Section fade-in
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Scroll to top
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = () => {
+      scrollTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+    scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Floating nav hide/reveal
+    const nav = document.getElementById("smartNav");
+    let navHidden = false;
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100 && !navHidden) {
+        nav.classList.add("hidden");
+        navHidden = true;
+      }
+    });
+    let hoverHideTimeout;
+
+    // Show nav on mouse enter
+    document.querySelector(".nav-reveal-zone").addEventListener("mouseenter", () => {
+      clearTimeout(hoverHideTimeout);
+      nav.classList.remove("hidden");
+      navHidden = false;
+    });
+
+    // Hide nav after delay when mouse leaves
+    document.querySelector(".nav-reveal-zone").addEventListener("mouseleave", () => {
+      if (window.scrollY > 100) {
+        hoverHideTimeout = setTimeout(() => {
+          nav.classList.add("hidden");
+          navHidden = true;
+        }, 1500); // 3000 ms = 3 seconds delay after hover ends
+      }
+    });
+
+    // Sticky header animation
+    const stickyHeaders = document.querySelectorAll('.fade-on-stick');
+    const stickyObserver = new IntersectionObserver(
+      entries => entries.forEach(e => {
+        if (e.intersectionRatio < 1) e.target.classList.add('stuck');
+      }),
+      { threshold: [1] }
+    );
+    stickyHeaders.forEach(header => stickyObserver.observe(header));
+
+    // Lightbox
+    function openLightbox(img) {
+      currentIndex = galleryImages.indexOf(img);
+      showLightboxImage();
+      document.getElementById("lightbox").style.display = "flex";
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+
+    function navigateLightbox(direction) {
+      currentIndex += direction;
+
+      if (currentIndex < 0) currentIndex = galleryImages.length - 1;
+      if (currentIndex >= galleryImages.length) currentIndex = 0;
+
+      showLightboxImage();
+    }
+
+    function showLightboxImage() {
+      const img = galleryImages[currentIndex];
+      document.getElementById("lightbox-img").src = img.src;
+      document.getElementById("lightbox-caption").textContent = img.alt;
+    }
+
+    const toggleBtn = document.getElementById('toggleProjectsBtn');
+    const extraProjects = document.getElementById('extra-projects');
+    const arrow = toggleBtn.querySelector('.arrow');
+    const label = toggleBtn.querySelector('.label');
+
+    toggleBtn.addEventListener('click', () => {
+      const isVisible = extraProjects.style.display === 'block';
+      extraProjects.style.display = isVisible ? 'none' : 'block';
+      arrow.classList.toggle('rotate', !isVisible);
+      label.textContent = isVisible ? 'Other Projects' : 'Hide Projects';
+    });
+
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 125, density: { enable: true, value_area: 800 } },
+        color: { value: "#00ffc3" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3, random: true },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#00ffc3",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" }
+        },
+        modes: {
+          repulse: { distance: 100 },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+
+    const projectImages = Array.from(document.querySelectorAll('.project-grid img'));
+
+    function openLightboxProject(img) {
+      const lightbox = document.getElementById("lightbox-project");
+      const imgEl = document.getElementById("lightbox-img-project");
+      const captionEl = document.getElementById("lightbox-caption-project");
+
+      imgEl.src = img.src;
+      captionEl.textContent = img.getAttribute("data-caption") || img.alt;
+      lightbox.style.display = "flex";
+    }
+
+    function closeLightboxProject() {
+      document.getElementById("lightbox-project").style.display = "none";
+    }
+
+
+    function showLightboxImageProject() {
+      const img = projectImages[currentIndex];
+      document.getElementById("lightbox-img").src = img.src;
+      document.getElementById("lightbox-caption").textContent = img.getAttribute("data-caption") || img.alt;
+    }
+
+
+    function toggleProjects() {
+      const hidden = document.getElementById("hidden-projects");
+      const btn = document.getElementById("toggleProjectsBtn");
+      const arrow = document.getElementById("toggleArrow");
+
+      if (hidden.style.display === "none") {
+        hidden.style.display = "grid";
+        btn.innerHTML = '<span id="toggleArrow">&#x25B2;</span> Hide Projects';
+      } else {
+        hidden.style.display = "none";
+        btn.innerHTML = '<span id="toggleArrow">&#x25BC;</span> Other Projects';
+      }
+    }
+    document.addEventListener("keydown", function (event) {
+    const projectLightbox = document.getElementById("lightbox-project");
+    if (projectLightbox.style.display === "flex" && event.key === "Escape") {
+      closeLightboxProject();
+    }
+  });
+
+  const homeTitle = document.querySelector(".home-title");
+  const homeQuote = document.querySelector(".home-quote");
+  const homeSection = document.getElementById("home");
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const sectionHeight = homeSection.offsetHeight;
+
+    if (scrollY < sectionHeight) {
+      // Animate within home section
+      const progress = Math.min(scrollY / (sectionHeight / 2), 1);
+      const translateY = -50 + progress * -50; // -50% to -100%
+      const scale = 1 - progress * 0.35;
+
+      homeTitle.classList.remove("fixed");
+      homeTitle.style.transform = `translate(-50%, ${translateY}%) scale(${scale})`;
+      homeQuote.style.opacity = 1 - progress * 1.5;
+    } else {
+      // Lock to top for all further scroll
+      if (!homeTitle.classList.contains("fixed")) {
+        homeTitle.classList.add("fixed");
+        homeTitle.style.transform = ""; // Let CSS handle it
+      }
+      homeQuote.style.opacity = 0;
+    }
+  });
+
+
+
+
+
+
+  </script>
+</body>
+</html>
+
+
+
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif;
+  font-style: normal;
+}
+
+
+/* Sections */
+section {
+  padding: 60px 10% 40px;
+  border-bottom: 1px solid #333;
+}
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+a {
+  color: #00ffc3;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Scroll-to-top button */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 40px;
+  z-index: 999;
+  font-size: 24px;
+  background-color: #00ffc3;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Floating nav bar */
+.nav-reveal-zone {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
+}
+.floating-nav {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  padding: 20px 40px;
+  background: rgba(20, 20, 30, 0.85);
+  border-radius: 60px;
+  backdrop-filter: blur(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 1;
+}
+.floating-nav.hidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(100%);
+  pointer-events: none;
+}
+.nav-reveal-zone:hover .floating-nav {
+  opacity: 1 !important;
+  transform: translateX(-50%) translateY(0) !important;
+  pointer-events: auto !important;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+}
+.nav-list li a {
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: 5px;
+}
+.nav-list li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #00ffc3;
+  transform: translateX(-50%);
+  transition: 0.3s ease;
+}
+.nav-list li a:hover::after {
+  width: 60%;
+}
+.nav-list .logo img {
+  height: 32px;
+  width: auto;
+}
+
+/* About section layout */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+.about-img img {
+  width: 320px;
+  height: auto;
+  border-radius: 12px;
+  border: 3px solid #00ffc3;
+  object-fit: cover;
+}
+.about-text {
+  flex: 1;
+  max-width: 600px;
+  font-style: normal;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  color: #c9c5c5;
+}
+.about-text p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+.about-name {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+/* Sticky Headings */
+.sticky-header {
+  position: static; /* disables sticking */
+  background: none;
+  z-index: auto;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.sticky-header h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #00ffc3;
+  margin-bottom: 10px;
+}
+
+
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+.fade-in-visible {
+  opacity: 1 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-list {
+    gap: 20px;
+  }
+  .floating-nav {
+    padding: 15px 25px;
+  }
+  .nav-list li a {
+    font-size: 14px;
+  }
+  .home-title {
+  font-size: 28px;
+  }
+  .home-quote {
+  font-size: 14px;
+  }
+
+}
+
+/* === Gallery Grid === */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0, 255, 195, 0.3);
+}
+
+/* === Lightbox === */
+#lightbox {
+display: none;
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+}
+#lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 255, 195, 0.2);
+}
+.lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 36px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 255, 195, 0.2);
+}
+
+#lightbox-caption {
+  color: #ccc;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 12px;
+  max-width: 80%;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 36px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  font-size: 48px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  transform: translateY(-50%);
+}
+.lightbox-nav.left {
+  left: 30px;
+}
+.lightbox-nav.right {
+  right: 30px;
+}
+
+.project-entry {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.project-entry img {
+  width: 500px;
+  border-radius: 10px;
+  border: 0px solid #00ffc3;
+}
+
+.project-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.project-text h3 {
+  color: #00ffc3;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.project-text p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.toggle-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.toggle-btn {
+  background-color: rgba(0, 255, 195, 0.10); /* soft neon fill */
+  color: #00ffc3;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;         /* no outline */
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle-btn:hover {
+  background-color: rgba(0, 255, 195, 0.25);
+  transform: scale(1.03);
+}
+
+.arrow {
+  font-size: 22px;
+  transition: transform 0.3s ease;
+  transform: rotate(90deg); /* down */
+}
+
+.arrow.rotate {
+  transform: rotate(-90deg); /* up */
+}
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #000;
+  color: #fff;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.home-hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Particle container */
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  pointer-events: auto;
+}
+
+/* Overlay content */
+.home-overlay {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 60px 40px;
+  border-radius: 12px;
+  max-width: 800px;
+  text-align: center;
+
+  /* Add this line */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.home-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1); /* Perfectly centered */
+  font-size: 48px;
+  font-weight: 800;
+  color: #00ffc3;
+  font-family: 'Orbitron', sans-serif;
+  white-space: nowrap;
+  z-index: 10;
+  transition: transform 0.2s ease;
+}
+
+.home-title.fixed {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0) scale(0.65); /* Top and scaled */
+}
+
+.home-quote {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: #dbd7d7;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  width: 2000%;              Widen the quote
+  max-width: 1000px;       /* Allow more width on large screens */
+  line-height: 1.6;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+
+
+
+.home-fadeout {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
+  z-index: 2;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.project-item h3 {
+  font-size: 20px;
+  color: #00ffc3;
+  margin: 12px 0 6px;
+  font-weight: 700;
+}
+
+.project-item p {
+  font-size: 18px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.project-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+.project-box:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.project-box img {
+  width: 500px;
+  border-radius: 10px;
+  cursor: pointer;
+  object-fit: cover;
+  margin-right: 30px;
+}
+
+.project-content {
+  max-width: 700px;
+  font-style: normal;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  color: #c9c5c5;
+}
+
+
+
+.project-content h3 {
+  font-size: 22px;
+  color: #00ffc3;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.project-content p {
+  font-size: 18px;
+  color: #ccc;
+  line-height: 1.5;
+  font-style: normal;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  color: #c9c5c5;
+}
+
+#lightbox-project {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#lightbox-project img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 255, 195, 0.2);
+}
+
+#lightbox-caption-project {
+  color: #ccc;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 12px;
+  max-width: 80%;
+}
+
+#lightbox-project .lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 36px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#experience h3 {
+  color: #00ffc3;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 600;
+  
+}
+
+#publications h3 {
+  color: #00ffc3;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#experience ul li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-style: normal;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  color: #c9c5c5;
+}
+
+#publications ul li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-style: normal;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  color: #c9c5c5;
+}
+
+
+@media (max-width: 768px) {
+  /* For About Section */
+  .about-container {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-img,
+  .about-text {
+    width: 100%;
+    max-width: 100%;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+
+  /* For Project Section */
+  .project-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .project-box img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .project-content {
+    padding: 0 15px;
+    text-align: center;
+  }
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.contact-item a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #00ffc3;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-style: normal;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+.contact-item a:hover {
+  color: #fff;
+}
+
+.contact-item img {
+  width: 28px;
+  height: 28px;
+  filter: invert(100%);
+  transition: transform 0.3s ease;
+}
+
+.contact-item a:hover img {
+  transform: scale(1.1);
+}
+
+#cv h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-style: normal;
+}
+
+#cv p {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}

@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Om Kolhe</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <!-- Project Lightbox -->
 <div id="lightbox-project">
@@ -16,6 +18,12 @@
 </div>
 
 <body>
+  <!-- Global sticky title -->
+  <h1 class="home-title" id="brainTitle">BRAIN-DRIVEN TECHNOLOGY</h1>
+  <p class="home-quote" id="brainQuote">
+    “As followers of natural science we know nothing of any relation between thoughts and the brain,
+    except as a gross correlation in time and space.” <br>~ Charles Scott Sherrington
+  </p>
 
   <!-- HOME SECTION -->
   <section id="home" class="home-hero">
@@ -24,16 +32,14 @@
 
     <!-- Content -->
     <div class="home-overlay">
-      <h1 class="home-title">BRAIN-DRIVEN TECHNOLOGY</h1>
-      <p class="home-quote">
-        <em>"As followers of natural science we know nothing of any relation between thoughts and the brain, except as a gross correlation in time and space." ~ Charles Scott Sherrington 
-        </p>
+      <!-- <p class="home-quote">
+        <em>"As followers of natural science we know nothing of any relation between thoughts and the brain<br>, except as a gross correlation in time and space." ~ Charles Scott Sherrington 
+        </p> -->
     </div>
 
     <!-- Optional fade-out effect -->
     <div class="home-fadeout"></div>
   </section>
-
     
     <!-- About Me -->
     <section id="about" class="fade-in about-section">
@@ -223,25 +229,38 @@
   <section id="contact" class="fade-in">
     <div class="sticky-header"><h2>CONTACT</h2></div>
     <div class="contact-container">
-      <div class="contact-item">
-        <a href="mailto:okolhe@purdue.edu" target="_blank">
-          <img src="images/email-icon.svg" alt="Email icon" />
-          <span>okolhe@purdue.edu</span>
-        </a>
-      </div>
-      <div class="contact-item">
-        <a href="https://github.com/omkolhe" target="_blank">
-          <img src="images/github-icon.svg" alt="GitHub icon" />
-          <span>ghttps://github.com/omkolhe</span>
-        </a>
-      </div>
-      <div class="contact-item">
-        <a href="https://linkedin.com/in/om-kolhe" target="_blank">
-          <img src="images/linkedin-icon.svg" alt="LinkedIn icon" />
-          <span>linkedin.com/in/om-kolhe/</span>
-        </a>
+        <!-- Left: Google Map -->
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6074.797181468191!2d-86.92361892262775!3d40.42217207143889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8812e2b7eacc2bf5%3A0x812e4501deb2c51a!2sWeldon%20School%20of%20Biomedical%20Engineering%2C%20Purdue%20University!5e0!3m2!1sen!2sus!4v1748703053088!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- Middle: Purdue Logo -->
+        <div class="logo-container">
+          <img src="images/PurdueLogo.png" alt="Purdue University logo">
+        </div>
+
+        <!-- Right: Contact Info -->
+        <div class="contact-right">
+          <div class="contact-detail">
+            <img src="images/location-icon.svg" class="icon" alt="Location">
+            <span>West Lafayette, US</span>
+          </div>
+          <div class="contact-detail">
+            <a href="mailto:okolhe@purdue.edu" style="display: flex; align-items: center; gap: 10px; color: #ccc; text-decoration: none;">
+              <img src="images/email-icon.svg" class="icon" alt="Email">
+              <span>okolhe@purdue.edu</span>
+            </a>
+          </div>
+
+          <div class="social-icons">
+            <a href="https://linkedin.com/in/om-kolhe" target="_blank"><img src="images/linkedin-icon.svg" alt="LinkedIn"></a>
+            <a href="https://x.com/Om_Kolhe" target="_blank"><img src="images/twitter-icon.svg" alt="Twitter"></a>
+            <a href="https://github.com/omkolhe" target="_blank"><img src="images/github-icon.svg" alt="GitHub"></a>
+          </div>
+        </div>
       </div>
     </div>
+
   </section>
 
 
@@ -298,7 +317,6 @@
         }
       }
     });
-
 
     // Section fade-in
     const observer = new IntersectionObserver(entries => {
@@ -471,6 +489,36 @@
       closeLightboxProject();
     }
   });
+
+  const title = document.getElementById("brainTitle");
+  const quote = document.getElementById("brainQuote");
+  const home = document.getElementById("home");
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const homeHeight = home.offsetHeight;
+
+    const progress = Math.min(scrollY / homeHeight, 1); // 0 to 1
+    const top = 53 - progress * 50;
+    const scale = 1 - progress * 0.35;
+    const quoteOpacity = Math.max(0, 1 - progress * 4);
+
+    title.style.top = `${top}%`;
+    title.style.transform = `translate(-50%, -50%) scale(${scale})`;
+    quote.style.opacity = quoteOpacity;
+    quote.style.display = quoteOpacity <= 0 ? "none" : "block";
+
+    // Apply opaque background when title reaches top
+    if (progress >= 1) {
+      title.classList.add("opaque-bg");
+    } else {
+      title.classList.remove("opaque-bg");
+    }
+  });
+
+
+
+
 
   </script>
 </body>
