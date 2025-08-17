@@ -216,7 +216,7 @@
   <!-- CV -->
   <section id="cv" class="fade-in">
     <div class="sticky-header"><h2>CURRICULUM VITAE</h2></div>
-    <p><a href="cv.pdf" target="_blank">Click here</a> to download my CV (Last updated 2020).</p>
+    <p><a href="08142025_OmKolheResume.pdf" target="_blank">Click here</a> to download my CV (Last updated 2025).</p>
   </section>
 
   <!-- Contact -->
@@ -232,7 +232,7 @@
       <div class="contact-item">
         <a href="https://github.com/omkolhe" target="_blank">
           <img src="images/github-icon.svg" alt="GitHub icon" />
-          <span>ghttps://github.com/omkolhe</span>
+          <span>https://github.com/omkolhe</span>
         </a>
       </div>
       <div class="contact-item">
@@ -318,33 +318,33 @@
     };
     scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    // Floating nav hide/reveal
-    const nav = document.getElementById("smartNav");
-    let navHidden = false;
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 100 && !navHidden) {
-        nav.classList.add("hidden");
-        navHidden = true;
-      }
-    });
-    let hoverHideTimeout;
+    // // Floating nav hide/reveal
+    // const nav = document.getElementById("smartNav");
+    // let navHidden = false;
+    // window.addEventListener("scroll", () => {
+    //   if (window.scrollY > 100 && !navHidden) {
+    //     nav.classList.add("hidden");
+    //     navHidden = true;
+    //   }
+    // });
+    // let hoverHideTimeout;
 
-    // Show nav on mouse enter
-    document.querySelector(".nav-reveal-zone").addEventListener("mouseenter", () => {
-      clearTimeout(hoverHideTimeout);
-      nav.classList.remove("hidden");
-      navHidden = false;
-    });
+    // // Show nav on mouse enter
+    // document.querySelector(".nav-reveal-zone").addEventListener("mouseenter", () => {
+    //   clearTimeout(hoverHideTimeout);
+    //   nav.classList.remove("hidden");
+    //   navHidden = false;
+    // });
 
-    // Hide nav after delay when mouse leaves
-    document.querySelector(".nav-reveal-zone").addEventListener("mouseleave", () => {
-      if (window.scrollY > 100) {
-        hoverHideTimeout = setTimeout(() => {
-          nav.classList.add("hidden");
-          navHidden = true;
-        }, 1500); // 3000 ms = 3 seconds delay after hover ends
-      }
-    });
+    // // Hide nav after delay when mouse leaves
+    // document.querySelector(".nav-reveal-zone").addEventListener("mouseleave", () => {
+    //   if (window.scrollY > 100) {
+    //     hoverHideTimeout = setTimeout(() => {
+    //       nav.classList.add("hidden");
+    //       navHidden = true;
+    //     }, 1500); // 3000 ms = 3 seconds delay after hover ends
+    //   }
+    // });
 
     // Sticky header animation
     const stickyHeaders = document.querySelectorAll('.fade-on-stick');
