@@ -1,149 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Om Kolhe</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 </head>
-<!-- Project Lightbox -->
-<div id="lightbox-project">
-  <span class="lightbox-close" onclick="closeLightboxProject()">&times;</span>
-  <img id="lightbox-img-project" src="" alt="Full image">
-  <p id="lightbox-caption-project"></p>
-</div>
-
 <body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <button class="theme-toggle" id="themeToggle" aria-label="Switch color theme">☾ Dark</button>
 
-  <!-- HOME SECTION -->
   <section id="home" class="home-hero">
-    <!-- Particle background only for home -->
     <div id="particles-js"></div>
-
-    <!-- Content -->
     <div class="home-overlay">
+      <p class="section-kicker">Neuroscience · Neurotechnology · CMOS Interfaces</p>
       <h1 class="home-title">BRAIN-DRIVEN TECHNOLOGY</h1>
-      <p class="home-quote">
-        <em>"As followers of natural science we know nothing of any relation between thoughts and the brain, except as a gross correlation in time and space." ~ Charles Scott Sherrington 
-        </p>
+      <p class="home-quote"><em>“As followers of natural science we know nothing of any relation between thoughts and the brain, except as a gross correlation in time and space.”</em><br />— Charles Scott Sherrington</p>
     </div>
-
-    <!-- Optional fade-out effect -->
     <div class="home-fadeout"></div>
   </section>
 
-    
-    <!-- About Me -->
-    <section id="about" class="fade-in about-section">
+  <section id="about" class="fade-in about-section">
     <div class="sticky-header">
-        <h2>ABOUT ME</h2>
-        <p class="about-name">Om Kolhe</p>
-      </div>
+      <p class="section-kicker">About Me</p>
+      <h2>Om <span>Kolhe</span></h2>
+    </div>
     <div class="about-container">
-        <div class="about-img">
-        <img src="images/profile.jpeg" alt="Profile photo of Om Kolhe">
-        </div>
-        <div class="about-text">
-        <p>
-            I am a PhD candidate at Purdue University, working under the mentorship of <a href="https://nanoneurotech.com/" target="_blank">Prof. Krishna Jayant</a> in the Nano Neurotechnology Lab. My research focuses on understanding the neural mechanisms of learning and decision-making by developing novel technologies and experimental protocols. I am particularly interested in how neurons communicate and coordinate across multiple modalities to perform computations that are both robust and plastic. To support this investigation, I developed a custom neural recording platform that integrates advanced electrode designs with a CMOS backend for multimodal interrogation of neural activity.
-        </p>
-        <p>
-            I earned a dual degree (B.Tech + M.Tech) in Electrical Engineering from the Indian Institute of Technology (IIT) Bombay in August 2020. For my Master’s thesis, I worked with <a href="https://www.ee.iitb.ac.in/wiki/faculty/mshojaei" target="_blank">Prof. Maryam Shojaei Baghini</a> to design a multi-phase oscillator for next-generation 5G receivers. During my undergraduate studies, I worked under <a href="https://www.ee.iitb.ac.in/wiki/faculty/mshojaei" target="_blank">Prof. Shalabh Gupta</a> on the front-end design of an IRNSS receiver (the Indian regional navigation satellite system).
-        </p>
-        <!-- <p>
-            <a href="cv.pdf" target="_blank">Download CV</a> &nbsp;|&nbsp;
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-        </p> -->
-        </div>
-    </div>
-    </section>  
-
-  <!-- Projects -->
-  <section id="projects" class="fade-in">
-    <div class="sticky-header"><h2>RESEARCH PROJECTS</h2></div>
-  
-    <div class="project-grid" id="main-projects">
-      <div class="project-box">
-        <img src="images/MotorCortex.png" alt="Mechanisms underlying reliable motor output" onclick="openLightboxProject(this)" data-caption="Mechanisms underlying reliable motor output">
-        <div class="project-content">
-          <h3>Mechanisms underlying reliable motor output</h3>
-          <p align="justify">I am currently investigating the neural basis of skilled movement. Most brain functions rely on interactions between multiple, functionally distinct regions, and the execution of reliable, goal-directed actions requires the coordinated activity of several neural populations. Despite their importance, the mechanisms that enable precise and consistent communication between neuronal groups separated by millimeters remain poorly understood.</p>
-          <br>
-          <p><u> In collabration with <a href="https://www.hammadfkhan.com/" target="_blank">Hammad Khan</a></u></p>
-        </div>
+      <div class="about-img"><img src="images/profile.jpeg" alt="Profile photo of Om Kolhe"></div>
+      <div class="about-text">
+        <p>I am a PhD candidate at Purdue University, working under the mentorship of <a href="https://nanoneurotech.com/" target="_blank" rel="noopener">Prof. Krishna Jayant</a> in the Nano Neurotechnology Lab. My research focuses on understanding the neural mechanisms of learning and decision-making by developing novel technologies and experimental protocols. I am particularly interested in how neurons communicate and coordinate across multiple modalities to perform computations that are both robust and plastic.</p>
+        <p>I earned a dual degree (B.Tech + M.Tech) in Electrical Engineering from the Indian Institute of Technology (IIT) Bombay in August 2020. For my Master’s thesis, I worked with <a href="https://www.ee.iitb.ac.in/wiki/faculty/mshojaei" target="_blank" rel="noopener">Prof. Maryam Shojaei Baghini</a> to design a multi-phase oscillator for next-generation 5G receivers. During my undergraduate studies, I worked under <a href="https://www.ee.iitb.ac.in/wiki/faculty/mshojaei" target="_blank" rel="noopener">Prof. Shalabh Gupta</a> on the front-end design of an IRNSS receiver.</p>
       </div>
-  
-      <div class="project-box">
-        <img src="images/ChronicImaging.png" alt="Multimodal Neural Recording Platform" onclick="openLightboxProject(this)" data-caption="Multimodal Neural Recording Platform">
-        <div class="project-content">
-          <h3>Multimodal Neural Recording Platform</h3>
-          <p align="justify">We present a chronic multimodal platform capable of long-term, simultaneous electrophysiological recording and two-photon calcium imaging. We fabricated 32-channel transparent and flexible surface μECoG arrays, enabling optical access for two-photon imaging through the grid. Using this platform, we investigated the evolution of surface potentials and neural ensemble dynamics throughout the course of motor learning.</p>
-          <br>
-          <p><u> In collabration with <a href="https://www.linkedin.com/in/alecbooth/" target="_blank">Alec Booth</a></u></p>
-          <br>
-          <p> Accepted for an Oral Presentation in The 23rd International Conference on Solid-State Sensors,Actuators and Microsystems</p>
-        </div>
-      </div>
-  
-      <div class="project-box">
-        <img src="images/3DElectrodes.png" alt="3D electrodes for mapping layer specific dynamics" onclick="openLightboxProject(this)" data-caption="Traveling Wave Analysis in Cortical Circuits">
-        <div class="project-content">
-          <h3>3D electrodes for mapping cortical dynamics</h3>
-          <p align="justify">Conventional electrodes are limited to recording in only one or two dimensions. We are developing a three-dimensional electrode array capable of capturing electrical activity across an entire 3D volume of brain tissue. </p>
-        </div>
-      </div>
-
-      <div class="project-box">
-        <img src="images/CMOSAmplifier.png" alt="ASIC for simultaneous electrophysiology and electrochemistry" onclick="openLightboxProject(this)" data-caption="Flexible Laminar Probes">
-        <div class="project-content">
-          <h3>ASIC for simultaneous electrophysiology and electrochemistry</h3>
-          <p align="justify">Neurons communicate through multiple modalities, including electrical spiking activity and chemical signaling via neuromodulators such as dopamine. Dopamine plays a key role in learning and reward-based reinforcement, yet its precise effects on neural activity remain poorly understood. The application-specific integrated circuit (ASIC) developed in this project enables simultaneous electrophysiological and electrochemical recordings. This dual capability allows us to detect subtle fluctuations in dopamine levels and directly examine their influence on neural dynamics. </p>
-        </div>
-      </div>
-    </div>
-  
-    <div class="project-grid" id="hidden-projects" style="display: none;">
-  
-      <div class="project-box">
-        <img src="images/ILRO.png" alt="Injection Locked Ring Oscillator (ILRO) for 5G Receivers" onclick="openLightboxProject(this)" data-caption="Closed-loop Behavioral Control">
-        <div class="project-content">
-          <h3>Injection Locked Ring Oscillator (ILRO) for 5G Receivers</h3>
-          <p align="justify">This project aimed to design a low-power, low-phase-noise multiphase oscillator for N-Path filters. An 8-phase clock was generated using an injection-locked ring VCO synchronized with an on-chip LC oscillator. A 4-stage ring oscillator with sub-feedback loops achieved a 0.9–2.8 GHz tuning range. Phase noise was further reduced using a current-reuse LC oscillator with bondwire inductance, modeled and verified in HFSS. The design was taped out in UMC 65nm node.</p>
-        </div>
-      </div>
-
-      <div class="project-box">
-          <img src="images/IRNSS.png" alt="Front-end for IRNSS Receiver" onclick="openLightboxProject(this)" data-caption="Closed-loop Behavioral Control">
-          <div class="project-content">
-            <h3>Front-end for IRNSS Receiver</h3>
-            <p align="justify">This project aimed to develop a functional receiver for the Indian Regional Navigation Satellite System (IRNSS/NavIC) to support civil navigation. It involved designing and testing an S-band antenna and RF front-end circuitry for signal amplification, filtering, and downconversion. The system successfully received and decoded navigation signals from all IRNSS satellites, demonstrating the viability of the custom receiver design.</p>
-          </div>
-      </div>
-    </div>
-  
-    <div style="text-align: center; margin-top: 20px;">
-      <button id="toggleProjectsBtn" onclick="toggleProjects()" style="background-color: rgba(0,255,195,0.1); color: #00ffc3; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer;">
-        <span id="toggleArrow">▼</span> Other Projects
-      </button>
     </div>
   </section>
-  
-  
-  
 
-  <!-- Gallery -->
-  <section id="gallery" class="fade-in">
-    <div class="sticky-header"><h2>GALLERY</h2></div>
-    <div class="gallery-grid">
-      <img src="images/NNT_Logo_q003.png" alt="Microscale 3D printed Jayant lab initials - Nano NeuroTech Lab" onclick="openLightbox(this)">
-      <img src="images/PurduePSingle_q023.png" alt="Microscopic 3D printed Purdue Logo" onclick="openLightbox(this)">
-      <!-- <img src="images/MouseLeverLicking.gif" alt="Mouse performing a cue-initiated motor behaviour" onclick="openLightbox(this)"> -->
-      <img src="images/IC.jpg" alt="Micrograph of wirebonded EPhys and EChem amplifier array IC tapedout in TSMC 180nm node" onclick="openLightbox(this)">
-      <img src="images/GridImaging.GIF" alt="2P imaging of neurons through the transparent NeuroGrid" onclick="openLightbox(this)">
-      <img src="images/GCamp6f_042023.gif" alt="2P imaging of dendrites in L1 in Motor Cortex" onclick="openLightbox(this)">
+  <section id="projects" class="fade-in">
+    <div class="sticky-header">
+      <p class="section-kicker">Research Areas</p>
+      <h2>Current <span>Research</span></h2>
     </div>
+
+    <article class="research-area">
+      <div class="research-area-header">
+        <div><p class="research-number">AREA 01</p><h3>Neural Dynamics of Learning and Movement</h3></div>
+      </div>
+      <div class="project-stack">
+        <div class="project-box">
+          <img src="images/MotorCortex.png" alt="Mechanisms underlying reliable motor output" onclick="openLightboxProject(this)" data-caption="Mechanisms underlying reliable motor output">
+          <div class="project-content">
+            <h4>Mechanisms underlying reliable motor output</h4>
+            <p>I am investigating the neural basis of skilled movement, focusing on how distinct brain regions coordinate activity to support precise and reliable behavior.</p>
+            <p class="project-meta">In collaboration with <a href="https://www.hammadfkhan.com/" target="_blank" rel="noopener">Hammad Khan</a>. Manuscript currently in revision.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="research-area">
+      <div class="research-area-header">
+        <div><p class="research-number">AREA 02</p><h3>Neurotechnology Platforms</h3></div>
+      </div>
+      <div class="project-stack">
+        <div class="project-box">
+          <img src="images/ChronicImaging.png" alt="Multimodal Neural Recording Platform" onclick="openLightboxProject(this)" data-caption="Multimodal Neural Recording Platform">
+          <div class="project-content">
+            <h4>Multimodal Neural Recording Platform</h4>
+            <p>We developed a chronic platform for simultaneous electrophysiological recording and two-photon calcium imaging using transparent, flexible surface μECoG arrays.</p>
+            <p class="project-meta">In collaboration with <a href="https://www.linkedin.com/in/alecbooth/" target="_blank" rel="noopener">Alec Booth</a>. <a href="https://ieeexplore.ieee.org/abstract/document/11109720" target="_blank" rel="noopener">Paper</a></p>
+          </div>
+        </div>
+        <div class="project-box">
+          <img src="images/3DElectrodes.png" alt="3D electrodes for mapping cortical dynamics" onclick="openLightboxProject(this)" data-caption="3D electrodes for mapping cortical dynamics">
+          <div class="project-content">
+            <h4>3D electrodes for mapping cortical dynamics</h4>
+            <p>We are developing three-dimensional electrode arrays to capture electrical activity across a volume of brain tissue rather than only along a surface or a line.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="research-area">
+      <div class="research-area-header">
+        <div><p class="research-number">AREA 03</p><h3>Neural Interface Electronics</h3></div>
+      </div>
+      <div class="project-stack">
+        <div class="project-box">
+          <img src="images/CMOSAmplifier.png" alt="ASIC for simultaneous electrophysiology and electrochemistry" onclick="openLightboxProject(this)" data-caption="ASIC for simultaneous electrophysiology and electrochemistry">
+          <div class="project-content">
+            <h4>ASIC for simultaneous electrophysiology and electrochemistry</h4>
+            <p>This ASIC enables simultaneous electrophysiological and electrochemical recordings, allowing subtle changes in dopamine levels to be measured alongside neural dynamics.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div id="hidden-projects" style="display: none;">
+      <article class="research-area">
+        <div class="research-area-header">
+          <div><p class="research-number">ARCHIVE</p><h3>Earlier Engineering Projects</h3></div>
+        </div>
+        <div class="project-stack">
+          <div class="project-box">
+            <img src="images/ILRO.png" alt="Injection Locked Ring Oscillator for 5G Receivers" onclick="openLightboxProject(this)" data-caption="Injection Locked Ring Oscillator for 5G Receivers">
+            <div class="project-content"><h4>Injection Locked Ring Oscillator for 5G Receivers</h4><p>Designed a low-power, low-phase-noise multiphase oscillator for N-path filters, including HFSS modeling and tapeout in UMC 65 nm.</p></div>
+          </div>
+          <div class="project-box">
+            <img src="images/IRNSS.png" alt="Front-end for IRNSS Receiver" onclick="openLightboxProject(this)" data-caption="Front-end for IRNSS Receiver">
+            <div class="project-content"><h4>Front-end for IRNSS Receiver</h4><p>Designed and tested an S-band antenna and RF front-end circuitry for receiving and decoding IRNSS/NavIC navigation signals.</p></div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="toggle-container"><button class="toggle-btn" id="toggleProjectsBtn" onclick="toggleProjects()">▼ Earlier Engineering Projects</button></div>
+  </section>
+
+  <section id="publications" class="fade-in">
+    <div class="sticky-header">
+      <p class="section-kicker">Research Outcomes</p>
+      <h2>Research <span>Outputs</span></h2>
+    </div>
+
+    <div class="outcome-section">
+      <div class="outcome-heading">
+        <p class="section-kicker">01</p>
+        <h3>Publications</h3>
+      </div>
+      <div class="publication-tools">
+        <a class="pill-link" id="scholarLink" href="https://scholar.google.com/citations?user=kN07v_kAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="pill-link" href="https://ieeexplore.ieee.org/abstract/document/11109720" target="_blank" rel="noopener">IEEE Xplore</a>
+      </div>
+      <ul class="publication-list" id="publicationList"></ul>
+    </div>
+
+    <div class="outcome-section">
+      <div class="outcome-heading">
+        <p class="section-kicker">02</p>
+        <h3>Patents</h3>
+      </div>
+      <ul class="clean-list">
+        <li>Krishna Jayant, <b>Om T. Kolhe</b>, Daniel L. Gonzales, and Hammad F. Khan. “2D and 3D Neural Electrodes and Methods Thereof.” US Patent #63/542,491, 2024.</li>
+        <li>Krishna Jayant, <b>Om T. Kolhe</b>. “Integrated chip-scale electrophysiology and electrochemistry detection and amplifying apparatus, system, and method for use thereof.” Provisional PURD-152/00US 28593/710.</li>
+      </ul>
+    </div>
+
+    <div class="outcome-section">
+      <div class="outcome-heading">
+        <p class="section-kicker">03</p>
+        <h3>Presentations</h3>
+      </div>
+      <ul class="clean-list">
+        <li>Hammad F. Khan*, <b>Om T. Kolhe</b>*, M. Habibimatin, E. F. Tanase, Krishna Jayant. “Traveling waves support dynamic rerouting of communication subspaces across the motor cortical hierarchy,” SfN Barrels Conference, Chicago, IL, October 2024.</li>
+        <li><b>Om T. Kolhe</b>*, Hammad F. Khan*, M. Habibimatin, E. F. Tanase, Krishna Jayant. “Traveling waves enable reliable volitional motor movement,” SfN Conference, Chicago, IL, October 2024.</li>
+        <li>Hammad F. Khan*, <b>Om T. Kolhe</b>*, Meiseim Habibimatin, Krishna Jayant. “Traveling waves gate reliable volitional motor movement,” SfN Barrels Conference, Baltimore, MD, November 2023.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="gallery" class="fade-in">
+    <div class="sticky-header">
+      <p class="section-kicker">Gallery</p>
+      <h2>Research <span>Visuals</span></h2>
+    </div>
+
+    <div class="gallery-carousel" aria-label="Research image gallery">
+      <button class="gallery-arrow gallery-arrow-left" type="button" aria-label="Previous gallery image">&#10094;</button>
+      <div class="gallery-viewport">
+        <div class="gallery-track" id="galleryTrack">
+          <figure class="gallery-card"><img src="images/GridImaging.GIF" alt="2P imaging of neurons through the transparent NeuroGrid" onclick="openLightbox(this)"></figure>
+          <figure class="gallery-card"><img src="images/NNT_Logo_q003.png" alt="Microscale 3D printed Jayant lab initials - Nano NeuroTech Lab" onclick="openLightbox(this)"></figure>
+          <figure class="gallery-card"><img src="images/PurduePSingle_q023.png" alt="Microscopic 3D printed Purdue Logo" onclick="openLightbox(this)"></figure>
+          <figure class="gallery-card"><img src="images/IC.jpg" alt="Micrograph of wirebonded EPhys and EChem amplifier array IC taped out in TSMC 180 nm node" onclick="openLightbox(this)"></figure>
+          <figure class="gallery-card"><img src="images/GCamp6f_042023.gif" alt="Two-photon imaging of dendrites in layer 1 motor cortex" onclick="openLightbox(this)"></figure>
+        </div>
+      </div>
+      <button class="gallery-arrow gallery-arrow-right" type="button" aria-label="Next gallery image">&#10095;</button>
+    </div>
+
     <div id="lightbox">
       <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
       <span class="lightbox-nav left" onclick="navigateLightbox(-1)">&#10094;</span>
@@ -151,115 +185,46 @@
       <p id="lightbox-caption"></p>
       <span class="lightbox-nav right" onclick="navigateLightbox(1)">&#10095;</span>
     </div>
-    
   </section>
 
+  <section id="experience" class="fade-in">
+    <div class="sticky-header"><p class="section-kicker">Experience</p><h2>Teaching and <span>Work Experience</span></h2></div>
+    <ul class="clean-list">
+      <li>Summer Research Intern at <b>Sony Japan</b> (Summer 2018) — Developed SDR for Sony's TV Tuner IC.</li>
+      <li><b>Teaching Assistant:</b> BME695 Bioelectronics, BME330/BME301 Bioelectricity at Purdue, and mixed-signal / HDL courses at IIT Bombay.</li>
+      <li><b>Head of the Communication Subsystem, IIT Bombay Student Satellite Project:</b> Led a team contributing to satellite communication subsystem design and testing.</li>
+    </ul>
+  </section>
 
-<!-- Publications -->
-<section id="publications" class="fade-in">
-  <div class="sticky-header"><h2>PUBLICATIONS AND PRESENTATIONS</h2></div>
-
-  <h3>Publications</h3>
-  <ul>
-    <li> <b>Om T. Kolhe</b>*, Alec C. Booth*, Hammad F. Khan, Krishna Jayant. “A chronic multimodel platform for simultaneous electrophysiology and calcium imaging during motor behaviour”, Tranducers 2025 (Accepted for Oral Presentation).</li>
-    <li> A. Booth, Hammad F. Khan, <b>Om T. Kolhe</b>, and Krishna Jayant. “Implantation of Flexible Electrodes for Simultaneous In-Vivo Extracellular Recording and Two-Photon Imaging”, Proceedings of IMPRS 6 (1), 2023.</li>
-  </ul>
-
-  <h3>Patents</h3>
-  <ul>
-    <li>Krishna Jayant, <b>Om T. Kolhe</b>, Daniel L. Gonzales, and Hammad F. Khan. “2D and 3D Neural Electrodes and Methods Thereof.” US Patent #63/542,491, 2024 </li>
-    <li>Krishna Jayant, <b>Om T. Kolhe</b>, “Integrated chip-scale electrophysiology and electrochemistry detection and amplifying apparatus, system, and method for use thereof” (provisional PURD-152/00US 28593/710) </li>
-  </ul>
-
-  <h3>Conferences</h3>
-  <ul>
-    <li> Hammad F. Khan*, <b>Om T. Kolhe</b>*, M. Habibimatin, E. F. Tanase, Krishna Jayant. "Traveling waves support dynamic rerouting of communication subspaces across the motor cortical hierarchy", SfN Barrels Conference (Talk), Chicago, IL, October 2024.</li>
-    <li> <b>Om T. Kolhe</b>*, Hammad F. Khan*, M. Habibimatin, E. F. Tanase, Krishna Jayant. "Traveling waves enable reliable volitional motor movement", SfN Conference (Poster), Chicago, IL, October 2024.</li>
-    <li> Hammad F. Khan*, <b>Om T. Kolhe</b>*, Meiseim Habibimatin, Krishna Jayant. "Traveling waves gate reliable volitional motor movement", SfN Barrels Conference (Poster), Baltimore, MD, November 2023. </li>
-  </ul>
-
-</section>
-
-<!-- Experience -->
-<section id="experience" class="fade-in">
-  <div class="sticky-header"><h2>EXPERIENCE</h2></div>
-
-  <h3>Internships</h3>
-  <ul>
-    <li>Summer Research Intern at <b>Sony Japan</b> (Summer 2018) - Develolped SDR for Sony's TV Tuner IC</li>
-  </ul>
-
-  <h3>Teaching Assistant</h3>
-  <ul>
-    <li><b>BME695</b>: Bioelectronics (Spring 2025, Purdue) - Prof. Krishna Jayant</li>
-    <li><b>BME330</b>: Bioelectricity (Fall 2024, Purdue) - Prof. Krishna Jayant</li>
-    <li><b>BME301</b>: Bioelectricity (Fall 2023, Purdue) - Prof. Krishna Jayant</li>
-    <li><b>BME301</b>: Bioelectricity (Fall 2022, Purdue) - Prof. Krishna Jayant</li>
-    <li><b>EE719</b>: Mixed Signal IC Design (Spring 2020, IIT Bombay) - Prof. Maryam Shojaei Baghini</li>
-    <li><b>EE721</b>: Hardware Description Languages (Fall 2019, IIT Bombay) - Prof. Sachin Patkar</li>
-  </ul>
-
-  <h3>IIT Bombay Student Satellite Project (IITBSSP)</h3>
-  <ul>
-    <li>
-      <b>Head of the Communication Subsystem</b>: Led a team and contributed to the design and testing of the satellite’s communication subsystem.
-      <br/>
-      <span>Learn more at the 
-        <a href="https://www.aero.iitb.ac.in/satlab/" target="_blank">official website</a> and the 
-        <a href="https://www.aero.iitb.ac.in/satelliteWiki/index.php/Satellite_101" target="_blank">project wiki</a>.
-      </span>
-    </li>
-  </ul>
-
-</section>
-
-  <!-- CV -->
   <section id="cv" class="fade-in">
-    <div class="sticky-header"><h2>CURRICULUM VITAE</h2></div>
-    <p><a href="08142025_OmKolheResume.pdf" target="_blank">Click here</a> to download my CV (Last updated 2025).</p>
+    <div class="sticky-header"><p class="section-kicker">CV</p><h2>Curriculum <span>Vitae</span></h2></div>
+    <p style="text-align:center;"><a class="pill-link" href="08142025_OmKolheResume.pdf" target="_blank" rel="noopener">Download CV</a></p>
   </section>
 
-  <!-- Contact -->
   <section id="contact" class="fade-in">
-    <div class="sticky-header"><h2>CONTACT</h2></div>
-    <div class="contact-container">
-      <div class="contact-item">
-        <a href="mailto:okolhe@purdue.edu" target="_blank">
-          <img src="images/email-icon.svg" alt="Email icon" />
-          <span>okolhe@purdue.edu</span>
-        </a>
-      </div>
-      <div class="contact-item">
-        <a href="https://github.com/omkolhe" target="_blank">
-          <img src="images/github-icon.svg" alt="GitHub icon" />
-          <span>https://github.com/omkolhe</span>
-        </a>
-      </div>
-      <div class="contact-item">
-        <a href="https://linkedin.com/in/om-kolhe" target="_blank">
-          <img src="images/linkedin-icon.svg" alt="LinkedIn icon" />
-          <span>linkedin.com/in/om-kolhe/</span>
-        </a>
+    <div class="contact-card">
+      <p class="section-kicker">Contact</p>
+      <h3>Let’s connect</h3>
+      <p>For collaborations, research questions, or opportunities, reach me through email or academic/social platforms.</p>
+      <div class="contact-container">
+        <div class="contact-item"><a href="mailto:okolhe@purdue.edu"><svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm-.4 4.25-7.07 5.3a.88.88 0 0 1-1.06 0L4.4 8.25V6.5l7.6 5.7 7.6-5.7v1.75Z"/></svg><span>okolhe@purdue.edu</span></a></div>
+        <div class="contact-item"><a href="https://github.com/omkolhe" target="_blank" rel="noopener"><svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17 4.4 18 4.7 18 4.7c.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.4 5.9.4.4.8 1.1.8 2.2v4.1c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg><span>github.com/omkolhe</span></a></div>
+        <div class="contact-item"><a href="https://linkedin.com/in/om-kolhe" target="_blank" rel="noopener"><svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.54V9H7.1v11.45Z"/></svg><span>linkedin.com/in/om-kolhe</span></a></div>
+        <div class="contact-item"><a id="contactScholar" href="https://scholar.google.com/citations?user=kN07v_kAAAAJ&hl=en" target="_blank" rel="noopener"><svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1.5 9 12 15l8.5-4.86V17h2V9L12 3Zm-6 9.65V16c0 2.2 2.7 4 6 4s6-1.8 6-4v-3.35L12 16 6 12.65Z"/></svg><span>Google Scholar</span></a></div>
       </div>
     </div>
   </section>
 
-
-  <!-- Spacer -->
-  <div style="height: 200px;"></div>
-
-  <!-- Scroll to Top -->
   <button id="scrollTopBtn" title="Go to top">↑</button>
 
-  <!-- Navigation -->
   <div class="nav-reveal-zone">
-    <nav class="floating-nav" id="smartNav">
+    <nav class="floating-nav" id="smartNav" aria-label="Primary navigation">
       <ul class="nav-list">
         <li><a href="#home">HOME</a></li>
         <li><a href="#about">ABOUT</a></li>
-        <li><a href="#projects">PROJECTS</a></li>
-        <li><a href="#gallery">GALLERY</a></li>
+        <li><a href="#projects">RESEARCH</a></li>
         <li><a href="#publications">PUBLICATIONS</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
         <li><a href="#experience">EXPERIENCE</a></li>
         <li><a href="#cv">CV</a></li>
         <li><a href="#contact">CONTACT</a></li>
@@ -267,211 +232,177 @@
     </nav>
   </div>
 
-  <!-- Scripts -->
+  <div id="lightbox-project">
+    <span class="lightbox-close" onclick="closeLightboxProject()">&times;</span>
+    <img id="lightbox-img-project" src="" alt="Full project image">
+    <p id="lightbox-caption-project"></p>
+  </div>
 
-  
   <script>
-    const galleryImages = Array.from(document.querySelectorAll('.gallery-grid img'));
-    let currentIndex = 0;
-    
-    // Smooth scroll
+    const GOOGLE_SCHOLAR_USER_ID = "kN07v_kAAAAJ"; // Public Google Scholar profile ID.
+    const scholarUrl = `https://scholar.google.com/citations?user=${GOOGLE_SCHOLAR_USER_ID}`;
+    document.getElementById('scholarLink').href = scholarUrl;
+    document.getElementById('contactScholar').href = scholarUrl;
+
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    root.setAttribute('data-theme', savedTheme);
+    themeToggle.textContent = savedTheme === 'dark' ? '☾ Dark' : '☼ Light';
+    themeToggle.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      themeToggle.textContent = next === 'dark' ? '☾ Dark' : '☼ Light';
+    });
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener("click", function (e) {
+      anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-          window.scrollTo({ top: target.offsetTop - 80, behavior: "smooth" });
-        }
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
 
-    // Keyboard controls
-    document.addEventListener("keydown", function (event) {
-      const lightbox = document.getElementById("lightbox");
-      if (lightbox.style.display === "flex") {
-        if (event.key === "ArrowLeft") {
-          navigateLightbox(-1);
-        } else if (event.key === "ArrowRight") {
-          navigateLightbox(1);
-        } else if (event.key === "Escape") {
-          closeLightbox();
-        }
-      }
-    });
-
-
-    // Section fade-in
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('fade-in-visible'); });
+    }, { threshold: 0.12 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // Scroll to top
-    const scrollTopBtn = document.getElementById("scrollTopBtn");
-    window.onscroll = () => {
-      scrollTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
-    };
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    const progress = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.style.display = window.scrollY > 320 ? 'block' : 'none';
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = max > 0 ? `${(window.scrollY / max) * 100}%` : '0%';
+      const hero = document.querySelector('.home-overlay');
+      if (hero && window.scrollY < window.innerHeight) hero.style.transform = `translateY(${window.scrollY * 0.18}px)`;
+      updateActiveNav();
+    });
     scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    // // Floating nav hide/reveal
-    // const nav = document.getElementById("smartNav");
-    // let navHidden = false;
-    // window.addEventListener("scroll", () => {
-    //   if (window.scrollY > 100 && !navHidden) {
-    //     nav.classList.add("hidden");
-    //     navHidden = true;
-    //   }
-    // });
-    // let hoverHideTimeout;
+    function updateActiveNav() {
+      const sections = [...document.querySelectorAll('section[id]')];
+      const current = sections.filter(s => s.getBoundingClientRect().top < 140).pop();
+      document.querySelectorAll('.nav-list a').forEach(a => a.classList.toggle('active', current && a.getAttribute('href') === `#${current.id}`));
+    }
 
-    // // Show nav on mouse enter
-    // document.querySelector(".nav-reveal-zone").addEventListener("mouseenter", () => {
-    //   clearTimeout(hoverHideTimeout);
-    //   nav.classList.remove("hidden");
-    //   navHidden = false;
-    // });
+    async function loadPublications() {
+      const list = document.getElementById('publicationList');
+      const fallback = [
+        { title: 'Blood-catalyzed n-doped polymers for reversible optical neural control', authors: 'S. Samal*, S. Xiao*, S. Nelson, <strong>O. Kolhe</strong>, H. F. Khan, M. Habibi Matin, W.-J. Lee, M. Ahmed, D. Wang, T. Wang, T. Pikes, A. N. Scott, J. A. Rodriguez, M. R. Olson, Q. Deng, E. I. Parkinson, J.-C. Rochet, K. Jayant, and J. Mei', venue: 'Science', year: '2026', links: [{ label: 'Science', url: 'https://www.science.org/doi/abs/10.1126/science.adu5500' }] },
+        { title: 'A chronic multimodal platform for simultaneous electrophysiology and calcium imaging during motor behaviour', authors: '<strong>O. Kolhe</strong>*, Alec C. Booth*, Hammad F. Khan, Krishna Jayant', venue: 'Transducers 2025', year: '2025', links: [{ label: 'IEEE Xplore', url: 'https://ieeexplore.ieee.org/abstract/document/11109720' }] },
+        { title: 'Implantation of Flexible Electrodes for Simultaneous In-Vivo Extracellular Recording and Two-Photon Imaging', authors: 'A. Booth, Hammad F. Khan, <strong>O. Kolhe</strong>, Krishna Jayant', venue: 'Proceedings of IMPRS 6(1)', year: '2023', links: [] }
+      ];
+      try {
+        const response = await fetch('publications.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error('No publications.json found');
+        renderPublications(await response.json());
+      } catch (err) { renderPublications(fallback); }
 
-    // // Hide nav after delay when mouse leaves
-    // document.querySelector(".nav-reveal-zone").addEventListener("mouseleave", () => {
-    //   if (window.scrollY > 100) {
-    //     hoverHideTimeout = setTimeout(() => {
-    //       nav.classList.add("hidden");
-    //       navHidden = true;
-    //     }, 1500); // 3000 ms = 3 seconds delay after hover ends
-    //   }
-    // });
+      function renderPublications(items) {
+        list.innerHTML = items.map(pub => `
+          <li class="publication-card">
+            <span class="publication-title">${pub.title}</span>
+            <span class="publication-meta">${pub.authors}. ${pub.venue || ''}${pub.year ? `, ${pub.year}` : ''}.</span>
+            ${(pub.links || []).length ? `<div class="publication-links">${pub.links.map(link => {
+              const href = typeof link === 'string' ? link : link.url;
+              const label = typeof link === 'string' ? 'Link' : (link.label || 'Link');
+              return `<a href="${href}" target="_blank" rel="noopener">${label}</a>`;
+            }).join('')}</div>` : ''}
+          </li>`).join('');
+      }
+    }
+    loadPublications();
 
-    // Sticky header animation
-    const stickyHeaders = document.querySelectorAll('.fade-on-stick');
-    const stickyObserver = new IntersectionObserver(
-      entries => entries.forEach(e => {
-        if (e.intersectionRatio < 1) e.target.classList.add('stuck');
-      }),
-      { threshold: [1] }
-    );
-    stickyHeaders.forEach(header => stickyObserver.observe(header));
-
-    // Lightbox
+    const galleryImages = Array.from(document.querySelectorAll('.gallery-track img'));
+    let currentIndex = 0;
     function openLightbox(img) {
       currentIndex = galleryImages.indexOf(img);
       showLightboxImage();
-      document.getElementById("lightbox").style.display = "flex";
+      document.getElementById('lightbox').style.display = 'flex';
+      document.body.classList.add('lightbox-open');
     }
-
-    function closeLightbox() {
-      document.getElementById("lightbox").style.display = "none";
-    }
-
-    function navigateLightbox(direction) {
-      currentIndex += direction;
-
-      if (currentIndex < 0) currentIndex = galleryImages.length - 1;
-      if (currentIndex >= galleryImages.length) currentIndex = 0;
-
-      showLightboxImage();
-    }
-
+    function closeLightbox() { document.getElementById('lightbox').style.display = 'none'; document.body.classList.remove('lightbox-open'); }
+    function navigateLightbox(direction) { currentIndex = (currentIndex + direction + galleryImages.length) % galleryImages.length; showLightboxImage(); }
     function showLightboxImage() {
       const img = galleryImages[currentIndex];
-      document.getElementById("lightbox-img").src = img.src;
-      document.getElementById("lightbox-caption").textContent = img.alt;
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox-caption').textContent = img.alt;
     }
 
-    const toggleBtn = document.getElementById('toggleProjectsBtn');
-    const extraProjects = document.getElementById('extra-projects');
-    const arrow = toggleBtn.querySelector('.arrow');
-    const label = toggleBtn.querySelector('.label');
 
-    toggleBtn.addEventListener('click', () => {
-      const isVisible = extraProjects.style.display === 'block';
-      extraProjects.style.display = isVisible ? 'none' : 'block';
-      arrow.classList.toggle('rotate', !isVisible);
-      label.textContent = isVisible ? 'Other Projects' : 'Hide Projects';
-    });
+    const galleryTrack = document.getElementById('galleryTrack');
+    const galleryPrev = document.querySelector('.gallery-arrow-left');
+    const galleryNext = document.querySelector('.gallery-arrow-right');
+    let gallerySlideIndex = 0;
+    let galleryAutoScroll = true;
+    let galleryTimer = null;
 
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 125, density: { enable: true, value_area: 800 } },
-        color: { value: "#00ffc3" },
-        shape: { type: "circle" },
-        opacity: { value: 0.5 },
-        size: { value: 3, random: true },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: "#00ffc3",
-          opacity: 0.4,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 2,
-          out_mode: "out"
-        }
-      },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: { enable: true, mode: "repulse" },
-          onclick: { enable: true, mode: "push" }
-        },
-        modes: {
-          repulse: { distance: 100 },
-          push: { particles_nb: 4 }
-        }
-      },
-      retina_detect: true
-    });
+    function getVisibleGalleryCount() {
+      return window.matchMedia('(max-width: 760px)').matches ? 1 : 2;
+    }
 
-    const projectImages = Array.from(document.querySelectorAll('.project-grid img'));
+    function updateGalleryCarousel() {
+      if (!galleryTrack) return;
+      const visible = getVisibleGalleryCount();
+      const maxIndex = Math.max(0, galleryImages.length - visible);
+      gallerySlideIndex = Math.min(Math.max(gallerySlideIndex, 0), maxIndex);
+      const slideWidth = galleryTrack.querySelector('.gallery-card')?.getBoundingClientRect().width || 0;
+      const gap = parseFloat(getComputedStyle(galleryTrack).gap) || 0;
+      galleryTrack.style.transform = `translateX(-${gallerySlideIndex * (slideWidth + gap)}px)`;
+    }
+
+    function moveGallery(direction, userInitiated = false) {
+      if (userInitiated) {
+        galleryAutoScroll = false;
+        clearInterval(galleryTimer);
+      }
+      const visible = getVisibleGalleryCount();
+      const maxIndex = Math.max(0, galleryImages.length - visible);
+      gallerySlideIndex = gallerySlideIndex + direction;
+      if (gallerySlideIndex > maxIndex) gallerySlideIndex = 0;
+      if (gallerySlideIndex < 0) gallerySlideIndex = maxIndex;
+      updateGalleryCarousel();
+    }
+
+    galleryPrev?.addEventListener('click', () => moveGallery(-1, true));
+    galleryNext?.addEventListener('click', () => moveGallery(1, true));
+    window.addEventListener('resize', updateGalleryCarousel);
+    galleryTimer = setInterval(() => { if (galleryAutoScroll) moveGallery(1); }, 3200);
+    updateGalleryCarousel();
 
     function openLightboxProject(img) {
-      const lightbox = document.getElementById("lightbox-project");
-      const imgEl = document.getElementById("lightbox-img-project");
-      const captionEl = document.getElementById("lightbox-caption-project");
-
-      imgEl.src = img.src;
-      captionEl.textContent = img.getAttribute("data-caption") || img.alt;
-      lightbox.style.display = "flex";
+      document.getElementById('lightbox-img-project').src = img.src;
+      document.getElementById('lightbox-caption-project').textContent = img.dataset.caption || img.alt;
+      document.getElementById('lightbox-project').style.display = 'flex';
+      document.body.classList.add('lightbox-open');
     }
-
-    function closeLightboxProject() {
-      document.getElementById("lightbox-project").style.display = "none";
-    }
-
-
-    function showLightboxImageProject() {
-      const img = projectImages[currentIndex];
-      document.getElementById("lightbox-img").src = img.src;
-      document.getElementById("lightbox-caption").textContent = img.getAttribute("data-caption") || img.alt;
-    }
-
+    function closeLightboxProject() { document.getElementById('lightbox-project').style.display = 'none'; document.body.classList.remove('lightbox-open'); }
 
     function toggleProjects() {
-      const hidden = document.getElementById("hidden-projects");
-      const btn = document.getElementById("toggleProjectsBtn");
-      const arrow = document.getElementById("toggleArrow");
+      const hidden = document.getElementById('hidden-projects');
+      const btn = document.getElementById('toggleProjectsBtn');
+      const isHidden = hidden.style.display === 'none';
+      hidden.style.display = isHidden ? 'block' : 'none';
+      btn.textContent = isHidden ? '▲ Hide Earlier Engineering Projects' : '▼ Earlier Engineering Projects';
+    }
 
-      if (hidden.style.display === "none") {
-        hidden.style.display = "grid";
-        btn.innerHTML = '<span id="toggleArrow">&#x25B2;</span> Hide Projects';
-      } else {
-        hidden.style.display = "none";
-        btn.innerHTML = '<span id="toggleArrow">&#x25BC;</span> Other Projects';
+    document.addEventListener('keydown', event => {
+      if (document.getElementById('lightbox').style.display === 'flex') {
+        if (event.key === 'ArrowLeft') navigateLightbox(-1);
+        if (event.key === 'ArrowRight') navigateLightbox(1);
+        if (event.key === 'Escape') closeLightbox();
       }
-    }
-    document.addEventListener("keydown", function (event) {
-    const projectLightbox = document.getElementById("lightbox-project");
-    if (projectLightbox.style.display === "flex" && event.key === "Escape") {
-      closeLightboxProject();
-    }
-  });
+      if (document.getElementById('lightbox-project').style.display === 'flex' && event.key === 'Escape') closeLightboxProject();
+    });
 
+    if (window.particlesJS) {
+      particlesJS('particles-js', {
+        particles: { number: { value: 110, density: { enable: true, value_area: 900 } }, color: { value: '#00ffc3' }, shape: { type: 'circle' }, opacity: { value: 0.45 }, size: { value: 3, random: true }, line_linked: { enable: true, distance: 145, color: '#00ffc3', opacity: 0.32, width: 1 }, move: { enable: true, speed: 1.7, out_mode: 'out' } },
+        interactivity: { detect_on: 'canvas', events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } }, modes: { repulse: { distance: 100 }, push: { particles_nb: 4 } } }, retina_detect: true
+      });
+    }
   </script>
 </body>
 </html>
